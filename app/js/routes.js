@@ -1,6 +1,15 @@
 angular.module('app')
     .config(function($stateProvider, $urlRouterProvider, AccessLevels) {
         $stateProvider
+            .state('pokedex.pokedexglobal', {
+                url: '/pokedex',
+                views: {
+                    'content@': {
+                        templateUrl: 'pokedex/pokedexglobal.html',
+                        controller: 'pokedexglobalController'
+                    }
+                }
+            })
             .state('anon', {
                 abstract: true,
                 data: {
