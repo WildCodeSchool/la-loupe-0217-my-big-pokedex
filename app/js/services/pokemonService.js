@@ -1,5 +1,5 @@
 angular.module('app')
-    .service('PokedexService', function($http) {
+    .service('pokemonService', function($http) {
       return {
           get: function(id) {
               return $http.get('https://pokeapi.co/api/v2/pokemon/' + id);
