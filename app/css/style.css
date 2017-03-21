@@ -1,0 +1,15 @@
+.card {
+    border: solid grey 1px;
+    border-radius: 5%;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+.card-img {
+    text-align: center;
+    margin-left: 15%;
+}
+
+.pokemon-tag {
+    float: right;
+    margin: -2em 0.5%;
+}
