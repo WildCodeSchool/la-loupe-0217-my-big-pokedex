@@ -15,12 +15,38 @@
     <div class="row">
         <div class="col-lg-2">
             <div class="card">
+                <button id="modal-to-click" data-toggle="modal" data-target="#myModal1">
                 <img class="card-img" src="http://placehold.it/100x100" alt="Card image cap">
-                <div class="card-block">
-                    <h4 class="card-title">Pokemon name</h4><span class="pokemon-tag">#3</span>
-                    <a href="#" class="btn btn-primary">Add to my Pokédex</a>
+              </button>
+
+                <div class="card-block text-center">
+                    <h5 class="card-title">Pokemon name</h5><span class="pokemon-tag">#3</span>
+                    <a href="#" class="btn btn-primary">I caught him !</a>
+                </div>
+            </div>
+
+            <div id="myModal1" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title">Pokémon Name</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div ><img src="http://placehold.it/150x150">
+                            </div>
+                            <!--paragraphe-->
+                            <div class="inline">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary pull-left"><span>I caught him !</span aria-hidden="true"></button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
 </div>
