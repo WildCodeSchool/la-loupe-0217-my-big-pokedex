@@ -3,13 +3,16 @@
     border-radius: 5%;
     padding: 0.5em 0.5em 0.5em 0.5em;
 }
-
-.card-img {
-    text-align: center;
-    margin-left: 15%;
+#modal-to-click {
+    margin-left: 1.2em;
 }
-
+.card-title {
+    margin-left: -3em;
+}
 .pokemon-tag {
     float: right;
     margin: -2em 0.5%;
+}
+.inline  {
+  float: right;
 }
