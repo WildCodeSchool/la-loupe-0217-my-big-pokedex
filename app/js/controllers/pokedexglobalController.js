@@ -1,7 +1,6 @@
   angular.module('app')
       .controller('pokedexglobalController', function($scope, pokemonService, $http, LocalService) {
 
-
           function localStorage(pokemon) {
               if (LocalService.get('pokemon') === true) {
                   LocalService.get('pokemon');
@@ -22,17 +21,19 @@
               });
               console.log($scope.pokemons);
               console.log(LocalService.get('makey'));
-
-
-
-              // pokemonService.get(id).then(function (res) {
-              //   $scope.pokemon = res.data;
-              // });
-              //
-              // pokemonService.getImage(id).then(function (res) {
-              //   $scope.pokemonImage = res.data;
-              //   console.log();
-              // });
-
           });
+
+          $scope.japName = '';
+
+          function filterJap(obj) {
+            return obj.language.name === "ja";
+          }
+          $scope.getJap = function(id) {
+              pokemonService.getJap(id).then(function(res) {
+                  $scope.japName = (res.data.names.filter(filterJap))[0].name;
+              });
+
+              console.log($scope.japName);
+
+          };
       });

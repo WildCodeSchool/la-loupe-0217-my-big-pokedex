@@ -9,7 +9,9 @@ angular.module('app')
             },
             getImage: function(id) {
                 return $http.get('https://pokeapi.co/media/sprites/pokemon/' + id + '.png');
-
+            },
+            getJap: function(id) {
+                return $http.get('https://pokeapi.co/api/v2/pokemon-species/'+ id);
             }
         };
     });
