@@ -10,6 +10,7 @@
                   return pkmn;
               });
           });
+          
           $scope.japName = '';
 
           function filterJap(obj) {
