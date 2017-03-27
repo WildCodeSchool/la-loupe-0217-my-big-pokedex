@@ -8,8 +8,11 @@ header {
     color: white;
 }
 
-
 /* NAVBAR */
+
+.logo {
+  height: 40px;
+}
 
 .navbar {
     background-image: linear-gradient(#e74c3c, #e74c3c 60%, #e74c3c);
