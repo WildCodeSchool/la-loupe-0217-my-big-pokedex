@@ -13,10 +13,10 @@
     </div><br>
 
     <div class="row">
-        <div class="col-lg-2" ng-repeat="pokemon in pokemons">
+        <div class="col-lg-2" ng-repeat="pokemon in pokemons | orderBy: pokemon.id">
             <div class="card">
                 <button id="modal-to-click" data-toggle="modal" data-target="#myModal1">
-                <img class="card-img" src="{{ pokemon.sprites.front_default }}" alt="Card image cap">
+                <img class="card-img" src="{{pokemon.img}}" alt="Card image cap">
                         </button>
 
                 <div class="card-block text-center">
@@ -52,5 +52,6 @@
                 </div>
             </div>
         </div>
+        <button type="button" ng-click="nextOne()">next</button>
     </div>
 </div>
