@@ -10,12 +10,11 @@
         </div>
     </div><br>
     <div class="row">
-        <div class="col-lg-2 col-sm-3" ng-repeat="pokemon in pokemons">
+        <div class="col-lg-2 col-sm-3" ng-repeat="pokemon in pokemons | orderBy: pokemon.id" >
             <div class="card">
                 <button id="modal-to-click" data-toggle="modal" data-target="#{{ pokemon.id }}" ng-click="getJap(pokemon.id)">
-                    <img class="card-img" src="{{ pokemon.sprites.front_default }}" alt="Card image cap">
-                </button>
-
+                <img class="card-img" src="{{pokemon.img}}" alt="Card image cap">
+                        </button>
                 <div class="card-block text-center">
                     <h5 class="card-title">{{pokemon.name}}</h5><span class="pokemon-tag">No.{{pokemon.id}}</span>
                     <a href="#" class="btn-card">I caught him !</a>
@@ -32,7 +31,7 @@
                         <div class="media">
                             <div class="media-left media-middle">
                                 <div class="modal-body">
-                                    <img class="media-object" src="{{ pokemon.sprites.front_default }}" alt="Pokemon imgage">
+                                    <img class="media-object" src="{{pokemon.img}}" alt="Pokemon imgage">
                                 </div>
                             </div>
                             <div class="media-body">
@@ -48,5 +47,6 @@
                 </div>
             </div>
         </div>
+        <button type="button" ng-click="nextOne()">next</button>
     </div>
 </div>
