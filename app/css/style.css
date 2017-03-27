@@ -63,6 +63,12 @@ header {
 }
 
 
+/* SEARCH BAR */
+
+.input-gp {
+    margin-top: 5em;
+}
+
 /* CARDS */
 
 .card {
@@ -111,4 +117,12 @@ header {
   background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
   background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
   text-decoration: none;
+}
+
+
+/* MODAL */
+
+.modal-tag {
+  float: right;
+  margin: -2.15em 30em;
 }
