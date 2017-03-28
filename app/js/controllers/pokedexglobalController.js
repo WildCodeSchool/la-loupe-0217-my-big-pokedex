@@ -10,14 +10,14 @@
                   return pkmn;
               });
           });
-          
+
           $scope.japName = '';
 
           function filterJap(obj) {
               return obj.language.name === "ja";
           }
-          $scope.getJap = function(id) {
-              pokemonService.getJap(id).then(function(res) {
+          $scope.getSpe = function(id) {
+              pokemonService.getSpe(id).then(function(res) {
                   $scope.japName = (res.data.names.filter(filterJap))[0].name;
               });
 
@@ -27,11 +27,11 @@
           $scope.entrie = '';
 
           function filterEntrie(objEntrie) {
-              return objEntrie.flavor_text_entries.version.name === "alpha-sapphire" && objEntrie.flavor_text_entries.language.name === "en";
+              return objEntrie.version.name === "alpha-sapphire" && objEntrie.language.name === "en";
           }
-          $scope.getJap = function(id) {
-              pokemonService.getJap(id).then(function(res) {
-                  $scope.entrie = (res.data.version.filter(filterEntrie))[0].flavor_text;
+          $scope.getSpe = function(id) {
+              pokemonService.getSpe(id).then(function(res) {
+                  $scope.entrie = (res.data.flavor_text_entries.filter(filterEntrie))[0].flavor_text;
               });
           };
       });
