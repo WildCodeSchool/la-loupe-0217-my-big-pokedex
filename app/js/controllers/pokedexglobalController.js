@@ -25,4 +25,13 @@
                   $scope.japName = (res.data.names.filter(filterJap))[0].name;
               });
           };
+          $scope.type1 = '';
+          $scope.type2 = '';
+          $scope.getOne = function(id) {
+              pokemonService.getOne(id).then(function(res) {
+                  console.log(res.data);
+                  $scope.type1 = res.data.types[0].type.name;
+                  $scope.type2 = res.data.types[1].type.name;
+              });
+          };
       });

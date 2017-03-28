@@ -142,6 +142,10 @@ header {
 .media {
   border: groove 0.25em;
 }
+.media-body {
+  padding: 1em 1.5em 0.5em 0.5em;
+  text-align: justify;
+}
 .modal-footer {
   position: absolute;
   bottom: 0px;
