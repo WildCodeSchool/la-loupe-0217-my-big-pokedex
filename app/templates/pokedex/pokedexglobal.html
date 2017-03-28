@@ -2,15 +2,14 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="input-group input-gp">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-          <button class="btn btn-secondary" type="button">Go!</button>
-        </span>
+                <input type="text" ng-model="searchText" class="form-control" placeholder="Search for...">
+              
             </div>
         </div>
     </div><br>
-    <div class="row">
-        <div class="col-lg-2 col-sm-3" ng-repeat="pokemon in pokemons | orderBy: pokemon.id" >
+
+    <div id="searchTextResults" class="row">
+        <div class="col-lg-2 col-sm-3" ng-repeat="pokemon in pokemons | orderBy: pokemon.id | filter:searchText" >
             <div class="card">
                 <button id="modal-to-click" data-toggle="modal" data-target="#{{ pokemon.id }}" ng-click="getJap(pokemon.id)">
                 <img class="card-img" src="{{pokemon.img}}" alt="Card image cap">
@@ -47,6 +46,5 @@
                 </div>
             </div>
         </div>
-        <button type="button" ng-click="nextOne()">next</button>
     </div>
 </div>

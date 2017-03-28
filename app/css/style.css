@@ -69,7 +69,8 @@ header {
 /* SEARCH BAR */
 
 .input-gp {
-    margin-top: 5em;
+    margin-top: 6em;
+    width: 100%;
 }
 
 /* CARDS */
