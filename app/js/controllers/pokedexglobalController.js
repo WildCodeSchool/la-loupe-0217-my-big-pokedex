@@ -1,6 +1,5 @@
   angular.module('app')
       .controller('pokedexglobalController', function($scope, pokemonService, $http, LocalService) {
-
           pokemonService.getAll().then(function(res) {
               console.log(res.data);
               $scope.pokemons = res.data.results;
@@ -10,20 +9,11 @@
                   return pkmn;
               });
           });
-
           $scope.japName = '';
 
           function filterJap(obj) {
               return obj.language.name === "ja";
           }
-          $scope.getSpe = function(id) {
-              pokemonService.getSpe(id).then(function(res) {
-                  $scope.japName = (res.data.names.filter(filterJap))[0].name;
-              });
-
-              console.log($scope.japName);
-          };
-
           $scope.entrie = '';
 
           function filterEntrie(objEntrie) {
@@ -32,6 +22,7 @@
           $scope.getSpe = function(id) {
               pokemonService.getSpe(id).then(function(res) {
                   $scope.entrie = (res.data.flavor_text_entries.filter(filterEntrie))[0].flavor_text;
+                  $scope.japName = (res.data.names.filter(filterJap))[0].name;
               });
           };
       });
