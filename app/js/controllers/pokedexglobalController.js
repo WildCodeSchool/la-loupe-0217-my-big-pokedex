@@ -10,6 +10,7 @@
                   return pkmn;
               });
           });
+          
           $scope.japName = '';
 
           function filterJap(obj) {
@@ -21,5 +22,16 @@
               });
 
               console.log($scope.japName);
+          };
+
+          $scope.entrie = '';
+
+          function filterEntrie(objEntrie) {
+              return objEntrie.flavor_text_entries.version.name === "alpha-sapphire" && objEntrie.flavor_text_entries.language.name === "en";
+          }
+          $scope.getJap = function(id) {
+              pokemonService.getJap(id).then(function(res) {
+                  $scope.entrie = (res.data.version.filter(filterEntrie))[0].flavor_text;
+              });
           };
       });

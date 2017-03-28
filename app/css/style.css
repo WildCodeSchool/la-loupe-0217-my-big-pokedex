@@ -8,8 +8,11 @@ header {
     color: white;
 }
 
-
 /* NAVBAR */
+
+.logo {
+  height: 40px;
+}
 
 .navbar {
     background-image: linear-gradient(#e74c3c, #e74c3c 60%, #e74c3c);
@@ -124,5 +127,21 @@ header {
 
 .modal-tag {
   float: right;
-  margin: -2.15em 30em;
+  margin: -0.50em;
+}
+.modal-content {
+  border: solid #FADE41 1em;
+  width: 30em;
+  height: 40em;
+  margin-left: 6.40em;
+}
+.modal-header {
+  border: groove 0.25em;
+}
+.media {
+  border: groove 0.25em;
+}
+.modal-footer {
+  position: absolute;
+  bottom: 0px;
 }
