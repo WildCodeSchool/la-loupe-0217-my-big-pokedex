@@ -4,7 +4,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    padding-top: 55px;
+    padding-top: 90px;
     color: white;
 }
 
@@ -37,7 +37,7 @@ header {
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
     color: white;
-    background-image: linear-gradient(#c0392b, #c0392b 60%, #c0392b);
+    background-image: linear-gradient(#e74c3c, #e74c3c 60%, #e74c3c);
 }
 
 
@@ -71,6 +71,10 @@ header {
 .input-gp {
     margin-top: 6em;
     width: 100%;
+}
+
+.form {
+    margin-top: 6em;
 }
 
 /* CARDS */
