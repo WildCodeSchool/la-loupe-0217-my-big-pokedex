@@ -37,6 +37,8 @@
               pokemonService.getOne(id).then(function(res) {
                   console.log(res.data);
                   $scope.types = res.data.types;
+                  $scope.height = res.data.height/10;
+                  $scope.weight = res.data.weight/10;
                   console.log($scope.types);
                   $scope.spinner = false;
               }, function(err) {

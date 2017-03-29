@@ -9,7 +9,7 @@
     </div><br>
 
     <div id="searchTextResults" class="row">
-        <div class="col-lg-2 col-sm-3" ng-repeat="pokemon in pokemons | orderBy: pokemon.id | filter:searchText">
+        <div class="col-lg-2 col-sm-3" ng-repeat="pokemon in pokemons | filter:searchText">
             <div class="card">
                 <button id="modal-to-click" data-toggle="modal" data-target="#{{ pokemon.id }}" ng-click="clear(); getSpe(pokemon.id); getOne(pokemon.id)">
                 <img class="card-img" src="{{pokemon.img}}" alt="Card image cap">
@@ -22,14 +22,18 @@
             <div id="{{ pokemon.id }}" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content" ng-show="spinner">
-                        <img class="spinner" src="img/spinner-pikachu.gif">
+                        <img class="spinner" src="img/pokeball.gif">
                     </div>
                     <div class="modal-content" ng-show="!spinner">
 
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                            <h4 class="card-title">{{pokemon.name}}</h4><span class="modal-tag">No.{{pokemon.id}}</span>
-                            <h5 class="modalcard-subtitle">{{ japName }}</h5><img ng-repeat="type in types | orderBy: type.slot: true" ng-src="img/types/{{ type.type.name }}.png">
+                            <h4 class="card-title">{{pokemon.name}}</h4>
+                            <span class="modal-tag">No.{{pokemon.id}}</span>
+                            <span>Height : {{ height }} m</span>
+                            <span>Weight : {{ weight }} kg</span>
+                            <h5 class="modalcard-subtitle">{{ japName }}</h5>
+                            <img ng-repeat="type in types | orderBy: 'slot'" ng-src="img/types/{{ type.type.name }}.png">
                         </div>
                         <div class="media">
                             <div class="media-left media-middle">
