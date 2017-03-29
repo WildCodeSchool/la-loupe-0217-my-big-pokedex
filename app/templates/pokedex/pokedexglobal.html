@@ -2,17 +2,16 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="input-group input-gp">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-btn">
-          <button class="btn btn-secondary" type="button">Go!</button>
-        </span>
+                <input type="text" ng-model="searchText" class="form-control" placeholder="Search for...">
+
             </div>
         </div>
     </div><br>
-    <div class="row">
-        <div class="col-lg-2 col-sm-3" ng-repeat="pokemon in pokemons | orderBy: pokemon.id" >
+
+    <div id="searchTextResults" class="row">
+        <div class="col-lg-2 col-sm-3" ng-repeat="pokemon in pokemons | orderBy: pokemon.id | filter:searchText" >
             <div class="card">
-                <button id="modal-to-click" data-toggle="modal" data-target="#{{ pokemon.id }}" ng-click="getJap(pokemon.id)">
+                <button id="modal-to-click" data-toggle="modal" data-target="#{{ pokemon.id }}" ng-click="getSpe(pokemon.id); getOne(pokemon.id)">
                 <img class="card-img" src="{{pokemon.img}}" alt="Card image cap">
                         </button>
                 <div class="card-block text-center">
@@ -26,7 +25,7 @@
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                             <h4 class="card-title">{{pokemon.name}}</h4><span class="modal-tag">No.{{pokemon.id}}</span>
-                            <h5 class="modalcard-subtitle">{{ japName }}</h5>
+                            <h5 class="modalcard-subtitle">{{ japName }}</h5><img src="img/types/{{ type1 }}.png"><img src="img/types/{{ type2 }}.png">
                         </div>
                         <div class="media">
                             <div class="media-left media-middle">
@@ -35,9 +34,7 @@
                                 </div>
                             </div>
                             <div class="media-body">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat.
-                                </p>
+                                <p>{{ entrie }}</p>
                             </div>
                         </div>
                         <div class="modal-footer">
@@ -47,6 +44,5 @@
                 </div>
             </div>
         </div>
-        <button type="button" ng-click="nextOne()">next</button>
     </div>
 </div>
