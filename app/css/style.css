@@ -8,6 +8,14 @@ header {
     color: white;
 }
 
+h2 {
+  margin-top: 0;
+}
+
+.h2_right {
+  text-align: right;
+}
+
 /* NAVBAR */
 
 .logo {
