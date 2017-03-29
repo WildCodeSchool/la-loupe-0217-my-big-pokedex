@@ -37,6 +37,7 @@
               pokemonService.getOne(id).then(function(res) {
                   console.log(res.data);
                   $scope.types = res.data.types;
+                  console.log($scope.types);
                   $scope.spinner = false;
               }, function(err) {
                   console.log('erreur', err);
