@@ -9,9 +9,9 @@
     </div><br>
 
     <div id="searchTextResults" class="row">
-        <div class="col-lg-2 col-sm-3" ng-repeat="pokemon in pokemons | orderBy: pokemon.id | filter:searchText" >
+        <div class="col-lg-2 col-sm-3" ng-repeat="pokemon in pokemons | orderBy: pokemon.id | filter:searchText">
             <div class="card">
-                <button id="modal-to-click" data-toggle="modal" data-target="#{{ pokemon.id }}" ng-click="getSpe(pokemon.id); getOne(pokemon.id)">
+                <button id="modal-to-click" data-toggle="modal" data-target="#{{ pokemon.id }}" ng-click="clear(); getSpe(pokemon.id); getOne(pokemon.id)">
                 <img class="card-img" src="{{pokemon.img}}" alt="Card image cap">
                         </button>
                 <div class="card-block text-center">
@@ -21,11 +21,15 @@
             </div>
             <div id="{{ pokemon.id }}" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog">
-                    <div class="modal-content">
+                    <div class="modal-content" ng-show="spinner">
+                        <img src="img/spinner-pikachu.gif">
+                    </div>
+                    <div class="modal-content" ng-show="!spinner">
+
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                             <h4 class="card-title">{{pokemon.name}}</h4><span class="modal-tag">No.{{pokemon.id}}</span>
-                            <h5 class="modalcard-subtitle">{{ japName }}</h5><img src="img/types/{{ type1 }}.png"><img src="img/types/{{ type2 }}.png">
+                            <h5 class="modalcard-subtitle">{{ japName }}</h5><img ng-repeat="type in types" ng-src="img/types/{{ type }}.png">
                         </div>
                         <div class="media">
                             <div class="media-left media-middle">
