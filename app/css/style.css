@@ -16,6 +16,14 @@ h2 {
   text-align: right;
 }
 
+/* FOOTER */
+
+.footer-navbar {
+  margin-bottom: 0;
+  margin-top: 10%;
+  border: 0;
+}
+
 /* NAVBAR */
 
 .logo {
