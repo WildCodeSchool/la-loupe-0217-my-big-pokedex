@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('DashboardController', function($scope, pokemonService, $http, LocalService) {
+    .controller('pokedexglobalController', function($scope, pokemonService, $http, LocalService) {
         pokemonService.getAll().then(function(res) {
             console.log(res.data);
             $scope.pokemons = res.data.results;
@@ -35,23 +35,18 @@ angular.module('app')
         function filterHp(obj) {
             return obj.stat.url === "https://pokeapi.co/api/v2/stat/1/";
         }
-
         function filterAtt(obj) {
             return obj.stat.url === "https://pokeapi.co/api/v2/stat/2/";
         }
-
         function filterDef(obj) {
             return obj.stat.url === "https://pokeapi.co/api/v2/stat/3/";
         }
-
         function filterAts(obj) {
             return obj.stat.url === "https://pokeapi.co/api/v2/stat/4/";
         }
-
         function filterDfs(obj) {
             return obj.stat.url === "https://pokeapi.co/api/v2/stat/5/";
         }
-
         function filterSpd(obj) {
             return obj.stat.url === "https://pokeapi.co/api/v2/stat/6/";
         }
