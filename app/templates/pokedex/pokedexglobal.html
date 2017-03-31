@@ -30,10 +30,12 @@
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                             <h4 class="card-title">{{pokemon.name}}</h4>
                             <span class="modal-tag">No.{{pokemon.id}}</span>
-                            <span>Height : {{ height }} m</span>
-                            <span>Weight : {{ weight }} kg</span>
                             <h5 class="modalcard-subtitle">{{ japName }}</h5>
                             <img ng-repeat="type in types | orderBy: 'slot'" ng-src="img/types/{{ type.type.name }}.png">
+                            <div class="height-and-weight">
+                                <span class="modal-height">Height : {{ height }} m</span><br>
+                                <span class="modal-weight">Weight : {{ weight }} kg</span>
+                            </div>
                         </div>
                         <div class="media">
                             <div class="media-left media-middle">
@@ -44,6 +46,38 @@
                             <div class="media-body">
                                 <p>{{ entrie }}</p>
                             </div>
+                        </div>
+                        <div class="media-stat">
+                            <div class="titles-gauge">
+                                <span>HP</span>
+                                <span>Attack</span>
+                                <span>Defense</span>
+                                <span>Att-Spe</span>
+                                <span>Def-Spe</span>
+                                <span>Speed</span>
+                            </div>
+
+                            <div class="hp">
+                                <div class="hp-gauge" style="height: {{ hp }}%;"></div>
+                            </div>
+                            <div class="att">
+                                <div class="att-gauge" style="height: {{ att }}%;"></div>
+                            </div>
+                            <div class="def">
+                                <div class="def-gauge" style="height: {{ def }}%;"></div>
+                            </div>
+                            <div class="ats">
+                                <div class="ats-gauge" style="height: {{ ats }}%;"></div>
+                            </div>
+                            <div class="dfs">
+                                <div class="dfs-gauge" style="height: {{ dfs }}%;"></div>
+                            </div>
+                            <div class="spd">
+                                <div class="spd-gauge" style="height: {{ spd }}%;"></div>
+                            </div>
+                        </div>
+                        <div class="media-evolution">
+                            Some evolution stuff !
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn-card pull-left"><span>I caught him !</span aria-hidden="true"></button>

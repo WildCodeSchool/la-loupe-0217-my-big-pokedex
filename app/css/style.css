@@ -111,10 +111,11 @@ h2 {
 /* CARDS */
 
 .card {
-    border: groove 3px;
     border-radius: 5%;
     padding: 0.5em 0.5em 0.75em 0.5em;
     margin-bottom: 1em;
+    background-image: url(../img/bckgrd-card.jpg);
+    background-position: 100% 50%;
 }
 
 #modal-to-click {
@@ -176,6 +177,13 @@ h2 {
     margin: -0.50em;
 }
 
+.height-and-weight {
+    float: right;
+    margin-right: 10em;
+    margin-top: -2em;
+    line-height: 1.85em;
+}
+
 .modal-content {
     border: solid #FADE41 1em;
     width: 30em;
@@ -202,6 +210,114 @@ h2 {
     position: absolute;
     bottom: 0px;
 }
+
+.media-stat {
+    max-width: 95%;
+    margin: 0.5em auto;
+    padding-bottom: 1em;
+    border: groove 0.25em;
+    background-image: url(../img/bckgrd-stat.png);
+    background-size: contain;
+}
+
+.titles-gauge {
+    font-size: 90%;
+    text-align: center;
+    word-spacing: 1em;
+    background-color: white;
+}
+
+.hp {
+    margin-left: 2em;
+    width: 1em;
+    height: 6em;
+}
+
+.hp-gauge {
+    width: 50%;
+    background-color: lightblue;
+    margin: auto;
+    top: fixed
+}
+
+.att {
+    margin-left: 6em;
+    margin-top: -6em;
+    width: 1em;
+    height: 6em;
+    text-align: right;
+}
+
+.att-gauge {
+    width: 50%;
+    background-color: lightblue;
+    margin: auto;
+    top: fixed
+}
+
+.def {
+    margin-left: 10em;
+    margin-top: -6em;
+    width: 1em;
+    height: 6em;
+    text-align: right;
+}
+
+.def-gauge {
+    width: 50%;
+    background-color: lightblue;
+    margin: auto;
+    top: fixed
+}
+
+.ats {
+    margin-left: 14em;
+    margin-top: -6em;
+    width: 1em;
+    height: 6em;
+    text-align: right;
+}
+
+.ats-gauge {
+    width: 50%;
+    background-color: lightblue;
+    margin: auto;
+    top: fixed
+}
+
+.dfs {
+    margin-left: 18em;
+    margin-top: -6em;
+    width: 1em;
+    height: 6em;
+    text-align: right;
+}
+
+.dfs-gauge {
+    width: 50%;
+    background-color: lightblue;
+    margin: auto;
+    top: fixed
+}
+
+.spd {
+    margin-left: 22em;
+    margin-top: -6em;
+    width: 1em;
+    height: 6em;
+    text-align: right;
+}
+
+.spd-gauge {
+    width: 50%;
+    background-color: lightblue;
+    margin: auto;
+    top: fixed
+}
+
+.media-evolution {
+    border: groove 0.25em;
+    height: 4em;
 
 
 /*PROFIL*/
