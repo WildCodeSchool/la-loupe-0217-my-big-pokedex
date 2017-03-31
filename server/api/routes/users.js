@@ -24,6 +24,8 @@ module.exports = (app) => {
 
     router.delete('/:id', Auth.isAdministrator, user.delete);
 
+    router.put('/:id', user.updatecartridge);
+
     app.use('/users', router);
 
 };
