@@ -60,6 +60,15 @@ angular.module('app')
                     }
                 }
             })
+            .state('anon.top10', {
+                url: '/top10',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/top10.html',
+                        controller: 'top10Controller'
+                    }
+                }
+            })
             .state('anon.register', {
                 url: '/register',
                 views: {
