@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" role="navigation" ng-controller="NavbarController">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="NavbarController">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
@@ -11,14 +11,18 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav">
-                <li ui-sref-active="active"><a ui-sref="anon.home">Home</a></li>
+                <li ui-sref-active="active" class="logo">
+                    <a ui-sref="anon.home"><img src="../img/logo_app_final.png" alt=""></a>
+                </li>
 
             </ul>
+
             <ul class="nav navbar-nav navbar-right">
                 <li>
+                    <li ui-sref-active="active"><a ui-sref="anon.pokedex" ng-hide="auth.isAuthenticated()">Pokédex</a></li>
                     <li ui-sref-active="active"><a ui-sref="anon.login" ng-hide="auth.isAuthenticated()">Login</a></li>
                     <li ui-sref-active="active"><a ui-sref="anon.register" ng-hide="auth.isAuthenticated()">Register</a></li>
-                    <li ui-sref-active="active"><a ui-sref="user.dashboard" ng-show="auth.isAuthenticated()">Dashboard</a></li>
+                    <li ui-sref-active="active"><a ui-sref="user.dashboard" ng-show="auth.isAuthenticated()">My Pokédex</a></li>
                     <li><a ng-click="logout()" ng-show="auth.isAuthenticated()" href='#'>Logout</a></li>
                 </li>
             </ul>

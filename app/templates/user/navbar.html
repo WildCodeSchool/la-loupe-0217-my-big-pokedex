@@ -11,13 +11,16 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar">
             <ul class="nav navbar-nav">
-                <li ui-sref-active="active"><a ui-sref="user.dashboard" ng-show="auth.isAuthenticated()">Dashboard</a></li>
-                <li ui-sref-active="active"><a ui-sref="user.profile" ng-show="auth.isAuthenticated()">Profile</a></li>
-
+                <li ui-sref-active="active" class="logo" >
+                    <a ui-sref="anon.home"><img src="../img/logo_app_final.png" alt=""></a>
+                </li>
             </ul>
+
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                <li ui-sref-active="active"><a ui-sref="anon.home">Website</a></li>
+                    <li ui-sref-active="active"><a ui-sref="user.dashboard" ng-show="auth.isAuthenticated()">My Pokédex</a></li>
+                    <li ui-sref-active="active"><a ui-sref="user.profile" ng-show="auth.isAuthenticated()">Profile</a></li>
+                    <li ui-sref-active="active"><a ui-sref="anon.home">Website</a></li>
                     <li><a ng-click="logout()" ng-show="auth.isAuthenticated()" href='#'>Logout</a></li>
                 </li>
             </ul>
