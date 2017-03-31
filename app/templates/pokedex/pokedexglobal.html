@@ -19,7 +19,7 @@
                     <a href="#" class="btn-card">I caught him !</a>
                 </div>
             </div>
-            <div id="{{ pokemon.id }}" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+            <div id="{{ pokemon.id }}" class="modal animated bounceInDown" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content" ng-show="spinner">
                         <img class="spinner" src="img/pokeball.gif">
@@ -48,15 +48,6 @@
                             </div>
                         </div>
                         <div class="media-stat">
-                            <div class="titles-gauge">
-                                <span>HP</span>
-                                <span>Attack</span>
-                                <span>Defense</span>
-                                <span>Att-Spe</span>
-                                <span>Def-Spe</span>
-                                <span>Speed</span>
-                            </div>
-
                             <div class="hp">
                                 <div class="hp-gauge" style="height: {{ hp }}%;"></div>
                             </div>
@@ -75,6 +66,15 @@
                             <div class="spd">
                                 <div class="spd-gauge" style="height: {{ spd }}%;"></div>
                             </div>
+                            <div class="titles-gauge">
+                                <span>HP</span>
+                                <span>Attack</span>
+                                <span>Defense</span>
+                                <span>Att-Spe</span>
+                                <span>Def-Spe</span>
+                                <span>Speed</span>
+                            </div>
+
                         </div>
                         <div class="media-evolution">
                             Some evolution stuff !
