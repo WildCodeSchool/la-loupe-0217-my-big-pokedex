@@ -150,7 +150,7 @@ h2 {
 
 .card {
     border-radius: 5%;
-    padding: 0.5em 0.5em 0.75em 0.5em;
+    padding: 0.5em 0.5em 0.75em 0.54em;
     margin-bottom: 1em;
     background-image: url(../img/bckgrd-card.jpg);
     background-position: 100% 50%;
@@ -245,20 +245,63 @@ h2 {
     /* tiré de la moitié de sa propre hauteur */
 }
 
+.bug {
+    background-image: url(../img/bckgrd-types/bug.png);
+}
+.dark {
+    background-image: url(../img/bckgrd-types/dark.png);
+}
+.dragon {
+    background-image: url(../img/bckgrd-types/dragon.png);
+}
+.electric {
+    background-image: url(../img/bckgrd-types/electr.png);
+}
+.fairy {
+    background-image: url(../img/bckgrd-types/fairy.png);
+}
+.fight {
+    background-image: url(../img/bckgrd-types/fight.png);
+}
 .fire {
     background-image: url(../img/bckgrd-types/fire.png);
+}
+.grass {
+    background-image: url(../img/bckgrd-types/grass.png);
+}
+.ice {
+    background-image: url(../img/bckgrd-types/ice.png);
+}
+.normal {
+    background-image: url(../img/bckgrd-types/normal.png);
+}
+.psychic {
+    background-image: url(../img/bckgrd-types/psychic.png);
+}
+.steel {
+    background-image: url(../img/bckgrd-types/steel.png);
+}
+.water {
+    background-image: url(../img/bckgrd-types/water.png);
+}
+
+.modal-title {
+    text-align: left;
+    text-transform: capitalize;
+    font-weight: bold;
 }
 
 .modal-tag {
     float: right;
-    margin: -0.50em;
+    margin: -1.5em 1.75em;
+    font-size: 110%;
 }
 
 .height-and-weight {
     float: right;
-    margin-right: 10em;
-    margin-top: -2em;
-    line-height: 1.85em;
+    margin-right: 9em;
+    margin-top: -2.15em;
+    line-height: 1.95em;
 }
 
 .modal-content {
@@ -266,22 +309,36 @@ h2 {
     width: 30em;
     height: 40em;
     margin-left: 6.40em;
+    box-shadow: 1px 1px 5px 1px;
+}
+
+.modal-content-spinner {
+    background-color: white;
+    border: solid #FADE41 1em;
+    width: 30em;
+    height: 40em;
+    margin-left: 6.40em;
+    box-shadow: 1px 1px 5px 1px;
+    border-radius: 0.5em;
 }
 
 .modal-header {
-    border: groove 0.25em;
+    font-weight: bold;
+    font-size: 105%;
+    padding-bottom: 0.5em;
 }
 
 .media {
-    border: groove 0.25em;
-    max-width: 94%;
+    border: groove #FADE41 0.3em;
+    max-width: 92%;
     margin: 0.5em auto;
+    background-color: white;
 }
 
 .media-body {
     padding: 1em 1.5em 0.5em 0.5em;
     text-align: justify;
-    font-size: 90%;
+    font-size: 85%;
     vertical-align: middle;
 }
 
@@ -291,10 +348,10 @@ h2 {
 }
 
 .media-stat {
-    max-width: 94%;
+    max-width: 92%;
     margin: 0.5em auto;
     padding-bottom: 1em;
-    border: groove 0.25em;
+    border: groove #FADE41 0.3em;
     background-image: url(../img/bckgrd-stat.png);
     background-size: contain;
 }
@@ -302,9 +359,11 @@ h2 {
 .titles-gauge {
     font-size: 90%;
     text-align: center;
-    word-spacing: 1em;
+    word-spacing: 0.75em;
     background-color: white;
     margin-bottom: -1em;
+    font-weight: bold;
+    padding-left: 1em;
 }
 
 .hp {
@@ -391,7 +450,7 @@ h2 {
 
 .media-evolution {
     border: groove 0.25em;
-    height: 4em;
+    height: 5.5em;
 }
 
 
