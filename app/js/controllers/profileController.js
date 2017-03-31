@@ -8,7 +8,7 @@ angular.module('app')
         $scope.user = CurrentUser.user();
 
         $scope.putcartridge = function(user) {
-          profileService.updatecartridge($scope.newUser)
+          profileService.updatecartridge($scope.newUser);
             console.log(user);
         };
 
