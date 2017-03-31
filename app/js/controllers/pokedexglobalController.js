@@ -56,6 +56,8 @@
               pokemonService.getOne(id).then(function(res) {
                   console.log(res.data);
                   $scope.types = res.data.types;
+                  $scope.classTypes = displayClassTypes($scope.types);
+                  console.log('types', $scope.classTypes);
                   $scope.height = res.data.height / 10;
                   $scope.weight = res.data.weight / 10;
                   console.log($scope.types);
@@ -77,4 +79,12 @@
               $scope.japName = '';
               $scope.entrie = '';
           };
+
+          function displayClassTypes(types) {
+            if (types !== undefined) {
+              return types.map( function(type) {
+                return type.type.name;
+              }).join(' ');
+            }
+          }
       });
