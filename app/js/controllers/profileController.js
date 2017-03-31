@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('ProfileController', function($scope, profileService, CurrentUser) {
+    .controller('ProfileController', function($scope, profileService, UserService, CurrentUser, LocalService) {
         profileService.getAll().then(function(res) {
             console.log(res.data.results);
             $scope.cartridges = res.data.results;
@@ -7,17 +7,26 @@ angular.module('app')
 
         $scope.user = CurrentUser.user();
 
-        $scope.putcartridge = function(user) {
-          profileService.updatecartridge($scope.newUser);
-            console.log(user);
+        console.log($scope.user);
+
+        $scope.update = function() {
+        UserService.update($scope.user._id, $scope.user)
+        //.then(function (res) {
+          //$scope.user.cartridge = res.data.user.cartridge;
+          // LocalService.set('user', JSON.stringify(res.data.user))
+        //});
+
         };
 
         $scope.class = "cartridge-img";
         $scope.changeClass = function(name) {
-          if($scope.selected.indexOf(name) === -1) {
-            $scope.selected.push(name);}
-            else {$scope.selected.splice($scope.selected.indexOf(name), 1);}
+          if($scope.user.cartridge.indexOf(name) === -1) {
+            $scope.user.cartridge.push(name);}
+            else {$scope.user.cartridge.splice($scope.user.cartridge.indexOf(name), 1);}
         };
-        $scope.selected =[];
-        console.log($scope.selected);
+
+
+
+        console.log($scope.user.cartridge);
     });
+
