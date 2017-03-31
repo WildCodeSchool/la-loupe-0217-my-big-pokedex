@@ -77,4 +77,18 @@ angular.module('app')
             $scope.japName = '';
             $scope.entrie = '';
         };
+
+        $scope.hasPokemon = function(id) {
+            return $scope.pokemonCaught.indexOf(id) != -1;
+        };
+        $scope.hasnotPokemon = function(id) {
+            return $scope.pokemonCaught.indexOf(id) == -1;
+        };
+
+        $scope.pokemonCaught = [];
+
+        $scope.addPokemon = function(id) {
+            $scope.pokemonCaught.push(id);
+            console.log($scope.pokemonCaught);
+        };
     });
