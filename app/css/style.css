@@ -327,7 +327,7 @@ h2 {
     height: 100%;
     filter: grayscale(100%);
     box-shadow: 1px 1px 10px 1px;
-    transition-duration: 0.4s;
+    transition-duration: 0.2s;
 }
 
 .cartridge-click {

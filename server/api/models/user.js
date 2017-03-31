@@ -162,16 +162,17 @@ export default class User {
             }
         });
     }
-}
-updatecartridge (req, res) {
-    model.update(req.body, (err, cartridge) => {
-      if (err) {
-        res.status(500).send(err.message);
-      } else {
-        res.json({
-          success: true,
-          cartridge: cartridge
+
+    updatecartridge(req, res) {
+        model.update(req.body, (err, cartridge) => {
+            if (err) {
+                res.status(500).send(err.message);
+            } else {
+                res.json({
+                    success: true,
+                    cartridge: cartridge
+                });
+            };
         });
-      };
-    });
-  };
+    };
+}
