@@ -5,7 +5,7 @@ angular.module('app')
                 return $http.get('https://pokeapi.co/api/v2/version/?limit=26');
             },
             updatecartridge: function (cartridge) {
-                return $http.put('/', cartridge)
+                return $http.put('/', cartridge);
             },
         };
     });

@@ -8,7 +8,7 @@ angular.module('app')
                 return $http.get('http://localhost:8000/users/' + id);
             },
             update: function(id, user) {
-                return $http.put('http://localhost:8000/users' + id, user);
+                return $http.put('http://localhost:8000/users/' + id, user);
             },
             delete: function(id) {
                 return $http.delete('http://localhost:8000/users' + id);
