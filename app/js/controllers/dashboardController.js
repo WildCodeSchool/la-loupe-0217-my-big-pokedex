@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('DashboardController', function($scope, pokemonService, $http, LocalService) {
+    .controller('DashboardController', function($scope, pokemonService, UserService, CurrentUser, $http, LocalService) {
         pokemonService.getAll().then(function(res) {
             console.log(res.data);
             $scope.pokemons = res.data.results;
@@ -35,18 +35,23 @@ angular.module('app')
         function filterHp(obj) {
             return obj.stat.url === "https://pokeapi.co/api/v2/stat/1/";
         }
+
         function filterAtt(obj) {
             return obj.stat.url === "https://pokeapi.co/api/v2/stat/2/";
         }
+
         function filterDef(obj) {
             return obj.stat.url === "https://pokeapi.co/api/v2/stat/3/";
         }
+
         function filterAts(obj) {
             return obj.stat.url === "https://pokeapi.co/api/v2/stat/4/";
         }
+
         function filterDfs(obj) {
             return obj.stat.url === "https://pokeapi.co/api/v2/stat/5/";
         }
+
         function filterSpd(obj) {
             return obj.stat.url === "https://pokeapi.co/api/v2/stat/6/";
         }
@@ -78,17 +83,28 @@ angular.module('app')
             $scope.entrie = '';
         };
 
+        //PHILIPPE//
+
+        $scope.user = CurrentUser.user();
+        console.log($scope.user);
+
         $scope.hasPokemon = function(id) {
-            return $scope.pokemonCaught.indexOf(id) != -1;
+            return $scope.user.pokemonCaught.indexOf(id) !== -1;
         };
         $scope.hasnotPokemon = function(id) {
-            return $scope.pokemonCaught.indexOf(id) == -1;
+            return $scope.user.pokemonCaught.indexOf(id) === -1;
         };
 
-        $scope.pokemonCaught = [];
-
         $scope.addPokemon = function(id) {
-            $scope.pokemonCaught.push(id);
-            console.log($scope.pokemonCaught);
+            if ($scope.user.pokemonCaught.indexOf(id) === -1) {
+                $scope.user.pokemonCaught.push(id);
+            } else {
+                $scope.user.pokemonCaught.splice($scope.user.pokemonCaught.indexOf(id), 1);
+            }
+        };
+        console.log($scope.user.pokemonCaught);
+
+        $scope.update = function() {
+            UserService.update($scope.user._id, $scope.user);
         };
     });

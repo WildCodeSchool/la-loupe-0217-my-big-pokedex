@@ -30,8 +30,8 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    pokemonsCatched: {
-        type: Number,
+    pokemonCaught: {
+        type: Array,
     },
     cartridge: {
         type: Array,
