@@ -315,7 +315,7 @@ h2 {
 
 .hp-gauge {
     width: 50%;
-    background-color: lightblue;
+    background-color: #2980b9;
     margin: auto;
 }
 
@@ -329,7 +329,7 @@ h2 {
 
 .att-gauge {
     width: 50%;
-    background-color: lightblue;
+    background-color: #2980b9;
     margin: auto;
 }
 
@@ -343,7 +343,7 @@ h2 {
 
 .def-gauge {
     width: 50%;
-    background-color: lightblue;
+    background-color: #2980b9;
     margin: auto;
 }
 
@@ -357,7 +357,7 @@ h2 {
 
 .ats-gauge {
     width: 50%;
-    background-color: lightblue;
+    background-color: #2980b9;
     margin: auto;
 }
 
@@ -371,7 +371,7 @@ h2 {
 
 .dfs-gauge {
     width: 50%;
-    background-color: lightblue;
+    background-color: #2980b9;
     margin: auto;
 }
 
@@ -385,7 +385,7 @@ h2 {
 
 .spd-gauge {
     width: 50%;
-    background-color: lightblue;
+    background-color: #2980b9;
     margin: auto;
 }
 
