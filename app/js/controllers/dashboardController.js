@@ -57,27 +57,16 @@ angular.module('app')
         };
 
         $scope.hasPokemon = function(id) {
-          return $scope.pokemonCaught.indexOf(id) != -1;
+            return $scope.pokemonCaught.indexOf(id) != -1;
         };
         $scope.hasnotPokemon = function(id) {
-          return $scope.pokemonCaught.indexOf(id) == -1;
+            return $scope.pokemonCaught.indexOf(id) == -1;
         };
 
         $scope.pokemonCaught = [];
 
         $scope.addPokemon = function(id) {
-          $scope.pokemonCaught.push(id);
-          console.log($scope.pokemonCaught);
-        };
-            });
-        };
-        $scope.getOne = function(id) {
-            pokemonService.getOne(id).then(function(res) {
-                console.log(res.data);
-                $scope.type1 = res.data.types[0].type.name;
-                  if (res.data.types.length > 1) {
-                $scope.type2 = res.data.types[1].type.name;
-              } else $scope.type2 = res.data.types[1].type.name = hidden;
-            });
+            $scope.pokemonCaught.push(id);
+            console.log($scope.pokemonCaught);
         };
     });
