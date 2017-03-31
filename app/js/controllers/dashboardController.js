@@ -8,6 +8,7 @@ angular.module('app')
                 pkmn.img = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pkmn.id + ".png";
                 return pkmn;
             });
+
         }, function(err) {
             console.log('erreur', err);
         });
@@ -25,6 +26,7 @@ angular.module('app')
             pokemonService.getSpe(id).then(function(res) {
                 $scope.entrie = (res.data.flavor_text_entries.filter(filterEntrie))[0].flavor_text;
                 $scope.japName = (res.data.names.filter(filterJap))[0].name;
+
             }, function(err) {
                 console.log('erreur', err);
             });
@@ -66,5 +68,16 @@ angular.module('app')
         $scope.addPokemon = function(id) {
           $scope.pokemonCaught.push(id);
           console.log($scope.pokemonCaught);
+        };
+            });
+        };
+        $scope.getOne = function(id) {
+            pokemonService.getOne(id).then(function(res) {
+                console.log(res.data);
+                $scope.type1 = res.data.types[0].type.name;
+                  if (res.data.types.length > 1) {
+                $scope.type2 = res.data.types[1].type.name;
+              } else $scope.type2 = res.data.types[1].type.name = hidden;
+            });
         };
     });
