@@ -1,5 +1,5 @@
 angular.module('app')
-    .controller('pokedexglobalController', function($scope, pokemonService, $http, LocalService) {
+    .controller('DashboardController', function($scope, pokemonService, $http, LocalService) {
         pokemonService.getAll().then(function(res) {
             console.log(res.data);
             $scope.pokemons = res.data.results;
