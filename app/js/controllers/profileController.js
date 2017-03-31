@@ -29,3 +29,4 @@ angular.module('app')
 
         console.log($scope.user.cartridge);
     });
+

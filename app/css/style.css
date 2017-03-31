@@ -1,3 +1,7 @@
+html {
+  min-height: calc(100vh - 100);
+}
+
 header {
     width: 100%;
     background-position: center top;
@@ -9,7 +13,53 @@ header {
 }
 
 h2 {
-    margin-top: 0;
+  margin-top: 0;
+}
+
+.h2_right {
+  text-align: right;
+}
+
+/* FOOTER */
+
+.footer-navbar {
+  margin-bottom: 0;
+  margin-top: 10%;
+  border: 0;
+}
+
+/* NAVBAR */
+
+.logo > a > img {
+  height: 45px;
+  margin-top: 3px;
+}
+
+.navbar-nav > li.logo > a {
+  padding: 0;
+}
+
+.navbar-nav > li {
+  padding-top:0px;
+  padding-bottom:0px;
+  height: 45px;
+
+}
+
+.navbar-nav > logo.active > a {
+  padding: 0;
+  height: 40px;
+}
+
+.navbar-default > li {
+  padding-top:0px;
+  padding-bottom:0px;
+}
+
+.navbar-default > .active > a {
+  padding: 0;
+  height: 40px;
+  margin-top: 0;
 }
 
 .h2_right {
@@ -69,7 +119,6 @@ h2 {
     color: white;
     background-image: linear-gradient(#e74c3c, #e74c3c 60%, #e74c3c);
 }
-
 
 /* SECTIONS HOME PAGE */
 
@@ -149,6 +198,42 @@ h2 {
     padding: 0.5em 1em 0.5em 1em;
     text-decoration: none;
 }
+
+.btn-card-success {
+    background: #2ecc71;
+    background-image: -webkit-linear-gradient(top, #2ecc71, #27ae60);
+    background-image: -moz-linear-gradient(top, #2ecc71, #27ae60);
+    background-image: -ms-linear-gradient(top, #2ecc71, #27ae60);
+    background-image: -o-linear-gradient(top, #2ecc71, #27ae60);
+    background-image: linear-gradient(to bottom, #2ecc71, #27ae60);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 1em;
+    padding: 0.5em 1em 0.5em 1em;
+    text-decoration: none;
+}
+
+.btn-card-success:hover {
+    background: #e74c3c;
+    background-image: -webkit-linear-gradient(top, #e74c3c, #c0392b);
+    background-image: -moz-linear-gradient(top, #e74c3c, #c0392b);
+    background-image: -ms-linear-gradient(top, #e74c3c, #c0392b);
+    background-image: -o-linear-gradient(top, #e74c3c, #c0392b);
+    background-image: linear-gradient(to bottom, #e74c3c, #c0392b);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 1em;
+    padding: 0.5em 1em 0.5em 1em;
+    text-decoration: none;
+}
+
+
 
 .btn-card:hover {
     background: #3cb0fd;
