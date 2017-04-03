@@ -4,51 +4,46 @@
     </header>
 
     <script type="text/javascript">
-    var description = [
-      "../img/home_title.png",
-      "../img/home_title-2.png",
-      "../img/home_title-3.png"
-    ];
+        var description = [
+            "../img/home_title.png",
+            "../img/home_title-2.png",
+            "../img/home_title-3.png"
+        ];
 
-    var size = description.length;
-    var x = Math.floor(size*Math.random());
-    document.getElementById('header_images').src=description[x];
+        var size = description.length;
+        var x = Math.floor(size * Math.random());
+        document.getElementById('header_images').src = description[x];
     </script>
 
-    <div class="row">
-        <div class="col-lg-12">
-            <section class="section1-3">
-                <img class="img_left" src="../img/new_account.png" alt="">
-                <h2>Create your account and collect them all!</h2>
-                <p>Wanna start and brand new Pokémon adventure? My Tiny Pokédex allows you to browse all
-                the existing Pokédex in order to collect them all. Ever wanted an easy app where you can
-              add, organize, sort (and more) all the Pokémon you got? My Tiny Pokédex is here! </p>
-                <p>So don't waste more time and create your free account now!</p>
-            </section>
-        </div>
-    </div>
+    <h1 class="home">How does it work?</h1>
 
-    <div class="row">
-        <div class="col-lg-12">
-            <section class="section2">
-                <img class="img_left" src="../img/games.jpg" alt="">
-                <h2 class="h2_right">Add all your Pokémon games!</h2>
-                <p>Wanna catch them all? First, add all your favorite Pokémon games to your account: it's easy and free!
-                From Pokémon Yellow to Black or Moon, all games are available! All you have to do is going to your
-              profile, browse all the Pokémon games and add those you own to your account.</p>
-                <p>Plus, we'll add new versions as soon
-              as they're released. That way you're sure to always be up to date!</p>
-            </section>
+    <div class="row card_home">
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <a ui-sref="anon.register"><img src="../img/ash_ketchum.jpg" alt="..."></a>
+                <div class="caption">
+                    <h3>Create your account</h3>
+                    <p>Ever wanted an easy app where you can add, organize, sort (and more) all the Pokémon you got? My Tiny Pokédex is here! So don't waste more time and create your free account now!</p>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <div class="row">
-        <div class="col-lg-12">
-            <section class="section1-3">
-                <img class="img_left" src="http://placehold.it/150x100" alt="">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga quidem corporis neque commodi amet, doloribus architecto iste ipsa porro ex et pariatur ipsum rerum nobis, dolores, dolor odit inventore mollitia. Lorem ipsum dolor sit amet,
-                    consectetur adipisicing elit. Minima, quod eveniet alias voluptates ex velit illo maiores labore tempore, distinctio culpa est adipisci perspiciatis minus inventore, debitis temporibus delectus fugit!</p>
-            </section>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="../img/games.png" alt="...">
+                <div class="caption">
+                    <h3>Add all your Pokémon games!</h3>
+                    <p>From Pokémon Yellow to Black or Moon, all games are available! All you have to do is going to your profile, browse all the Pokémon games and add those you own to your account.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="../img/gotcha.png" alt="...">
+                <div class="caption">
+                    <h3>Catch them all!</h3>
+                    <p>It's time to catch them all now! Go to your Pokédex, add the Pokémon you caught in your games, check their profile, update their level... everything is possible!</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
