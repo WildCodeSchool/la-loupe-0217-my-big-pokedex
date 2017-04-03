@@ -5,6 +5,7 @@ angular.module('app')
                 return $http.get('http://localhost:8000/users');
             },
             getOne: function(id) {
+              console.log(id);
                 return $http.get('http://localhost:8000/users/' + id);
             },
             update: function(id, user) {

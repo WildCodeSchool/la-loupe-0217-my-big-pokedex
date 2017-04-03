@@ -147,7 +147,7 @@ export default class User {
                 });
                 res.json({
                     success: true,
-                    user: user,
+                    user: User,
                     token: tk
                 });
             }
