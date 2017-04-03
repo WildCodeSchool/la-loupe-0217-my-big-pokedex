@@ -374,7 +374,7 @@ h2 {
 
 .hp-gauge {
     width: 50%;
-    background-color: #2980b9;
+    background-color: lightblue;
     margin: auto;
 }
 
@@ -388,7 +388,7 @@ h2 {
 
 .att-gauge {
     width: 50%;
-    background-color: #2980b9;
+    background-color: lightblue;
     margin: auto;
 }
 
@@ -402,7 +402,7 @@ h2 {
 
 .def-gauge {
     width: 50%;
-    background-color: #2980b9;
+    background-color: lightblue;
     margin: auto;
 }
 
@@ -416,7 +416,7 @@ h2 {
 
 .ats-gauge {
     width: 50%;
-    background-color: #2980b9;
+    background-color: lightblue;
     margin: auto;
 }
 
@@ -430,7 +430,7 @@ h2 {
 
 .dfs-gauge {
     width: 50%;
-    background-color: #2980b9;
+    background-color: lightblue;
     margin: auto;
 }
 
@@ -444,7 +444,7 @@ h2 {
 
 .spd-gauge {
     width: 50%;
-    background-color: #2980b9;
+    background-color: lightblue;
     margin: auto;
 }
 
@@ -485,6 +485,7 @@ h2 {
 }
 .btnprofile {
     border: none;
+    text-decoration: none;
 }
 .profile {
     background-image: url("/img/bgprofile.jpg");
@@ -518,6 +519,5 @@ h2 {
 }
 .containerProfile:hover {
     background-color: #D9D9D9;
-    margin: 10px auto;
     box-shadow: 1px 1px 10px 1px
 }
