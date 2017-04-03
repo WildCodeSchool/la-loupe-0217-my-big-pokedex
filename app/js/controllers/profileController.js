@@ -6,27 +6,21 @@ angular.module('app')
         });
 
         $scope.user = CurrentUser.user();
-
         console.log($scope.user);
 
         $scope.update = function() {
-        UserService.update($scope.user._id, $scope.user)
-        //.then(function (res) {
-          //$scope.user.cartridge = res.data.user.cartridge;
-          // LocalService.set('user', JSON.stringify(res.data.user))
-        //});
+            UserService.update($scope.user._id, $scope.user)
+            //.then(UserService.getOne());
 
         };
 
         $scope.class = "cartridge-img";
         $scope.changeClass = function(name) {
-          if($scope.user.cartridge.indexOf(name) === -1) {
-            $scope.user.cartridge.push(name);}
-            else {$scope.user.cartridge.splice($scope.user.cartridge.indexOf(name), 1);}
+            if ($scope.user.cartridge.indexOf(name) === -1) {
+                $scope.user.cartridge.push(name);
+            } else {
+                $scope.user.cartridge.splice($scope.user.cartridge.indexOf(name), 1);
+            }
         };
-
-
-
         console.log($scope.user.cartridge);
     });
-
