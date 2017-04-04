@@ -20,9 +20,11 @@
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <li ui-sref-active="active"><a ui-sref="anon.pokedex" ng-hide="auth.isAuthenticated()">Pokédex</a></li>
+                    <li ui-sref-active="active"><a ui-sref="anon.top10" ng-hide="auth.isAuthenticated()">Top 10 Trainers</a></li>
                     <li ui-sref-active="active"><a ui-sref="anon.login" ng-hide="auth.isAuthenticated()">Login</a></li>
                     <li ui-sref-active="active"><a ui-sref="anon.register" ng-hide="auth.isAuthenticated()">Register</a></li>
                     <li ui-sref-active="active"><a ui-sref="user.dashboard" ng-show="auth.isAuthenticated()">My Pokédex</a></li>
+                    <li ui-sref-active="active"><a ui-sref="user.profile" ng-show="auth.isAuthenticated()">Profile</a></li>
                     <li><a ng-click="logout()" ng-show="auth.isAuthenticated()" href='#'>Logout</a></li>
                 </li>
             </ul>
