@@ -48,36 +48,37 @@
                             </div>
                         </div>
                         <div class="media-stat">
+                          <div class="titles-gauge">
+                              <span>HP</span>
+                              <span>Attack</span>
+                              <span>Defense</span>
+                              <span>Att-Spe</span>
+                              <span>Def-Spe</span>
+                              <span>Speed</span>
+                          </div>
                             <div class="hp">
-                                <div class="hp-gauge" style="height: {{ hp }}%;"></div>
+                                <div class="hp-gauge" style="height: {{ hp }}%;">{{ hp }}</div>
                             </div>
                             <div class="att">
-                                <div class="att-gauge" style="height: {{ att }}%;"></div>
+                                <div class="att-gauge" style="height: {{ att }}%;">{{ att }}</div>
                             </div>
                             <div class="def">
-                                <div class="def-gauge" style="height: {{ def }}%;"></div>
+                                <div class="def-gauge" style="height: {{ def }}%;">{{ def }}</div>
                             </div>
                             <div class="ats">
-                                <div class="ats-gauge" style="height: {{ ats }}%;"></div>
+                                <div class="ats-gauge" style="height: {{ ats }}%;">{{ ats }}</div>
                             </div>
                             <div class="dfs">
-                                <div class="dfs-gauge" style="height: {{ dfs }}%;"></div>
+                                <div class="dfs-gauge" style="height: {{ dfs }}%;">{{ dfs }}</div>
                             </div>
                             <div class="spd">
-                                <div class="spd-gauge" style="height: {{ spd }}%;"></div>
+                                <div class="spd-gauge" style="height: {{ spd }}%;">{{ spd }}</div>
                             </div>
-                            <div class="titles-gauge">
-                                <span>HP</span>
-                                <span>Attack</span>
-                                <span>Defense</span>
-                                <span>Att-Spe</span>
-                                <span>Def-Spe</span>
-                                <span>Speed</span>
-                            </div>
-
                         </div>
                         <div class="media-evolution">
-                            Some evolution stuff !
+                          <p class="evol-title">Evolution details</p>
+                            <div class="evol1" ng-repeat="evol in evols">
+                                <img ng-src="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + evol + '.png'">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn-card pull-left"><span>I caught him !</span aria-hidden="true"></button>
