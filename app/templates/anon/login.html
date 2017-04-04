@@ -1,7 +1,8 @@
 <div class="container">
   <div class="row">
+    <div class="col-xs-4 col-xs-offset-4 pikachu"><img class="img-responsive" src="../img/spinner-pikachu.gif" alt=""></div>
       <div class="col-xs-6 col-xs-offset-3">
-          <form class="form" name="loginForm" novalidate ng-submit="login()">
+          <form class="form-login" name="loginForm" novalidate ng-submit="login()">
               <div ng-repeat="error in errors">{{error.error}}</div>
               <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -15,4 +16,5 @@
           </form>
       </div>
   </div>
+
 </div>
