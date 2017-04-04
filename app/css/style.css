@@ -8,9 +8,23 @@ header {
     color: white;
 }
 
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+  padding-top: 15px;
+}
+
 .top10_h1 {
     margin-top: 2em;
     width: 100%;
+}
+
+.home {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.pikachu {
+  padding-top: 4em;
 }
 
 h2 {
