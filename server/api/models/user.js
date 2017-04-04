@@ -25,6 +25,16 @@ const userSchema = new mongoose.Schema({
     isAdmin: {
         type: Boolean,
         default: false
+    },
+    firstname: {
+        type: String,
+        required: true
+    },
+    pokemonCaught: {
+        type: Array,
+    },
+    cartridge: {
+        type: Array,
     }
 });
 
@@ -56,7 +66,7 @@ export default class User {
                             res.status(400).send(err);
                         } else {
                             if (isMatch) {
-                                user.password = null;
+                                delete user.password;
                                 let tk = jsonwebtoken.sign(user, token, {
                                     expiresIn: "24h"
                                 });
@@ -112,6 +122,7 @@ export default class User {
                     }
                     res.status(500).send(err.message);
                 } else {
+                    delete user.password
                     let tk = jsonwebtoken.sign(user, token, {
                         expiresIn: "24h"
                     });
@@ -136,7 +147,7 @@ export default class User {
                 });
                 res.json({
                     success: true,
-                    user: user,
+                    user: User,
                     token: tk
                 });
             }
@@ -152,4 +163,17 @@ export default class User {
             }
         });
     }
+
+    // updatecartridge(req, res) {
+    //     model.update(req.body, (err, cartridge) => {
+    //         if (err) {
+    //             res.status(500).send(err.message);
+    //         } else {
+    //             res.json({
+    //                 success: true,
+    //                 cartridge: cartridge
+    //             });
+    //         };
+    //     });
+    // };
 }
