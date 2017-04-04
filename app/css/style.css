@@ -320,7 +320,6 @@ h2 {
 .ground {
     background-image: url(../img/bckgrd-types/ground.png);
 }
-
 .fire {
     background-image: url(../img/bckgrd-types/fire.png);
 }
@@ -336,7 +335,6 @@ h2 {
 .normal {
     background-image: url(../img/bckgrd-types/normal.png);
 }
-
 .psychic {
     background-image: url(../img/bckgrd-types/psychic.png);
 }
@@ -585,7 +583,7 @@ h2 {
     border-radius: 50%;
     height: 4em;
     width: 4em;
-    margin: -.51em 2.5em 0.5em;
+    margin: -9em 2.5em 0.5em;
 }
 
 .evol2 {
