@@ -5,7 +5,6 @@ angular.module('app')
             $scope.cartridges = res.data.results;
         });
         $scope.user = {};
-
         var id = CurrentUser.user()._id;
         console.log(id);
 
@@ -29,8 +28,28 @@ angular.module('app')
                 $scope.user.cartridge.splice($scope.user.cartridge.indexOf(name), 1);
             }
         };
+        $scope.allUsers = [];
+        UserService.getAll().then(function(res) {
+            $scope.allUsers = res.data;
+            $scope.allUsers.sort(function(a, b) {
+                return b.pokemonCaught.length - a.pokemonCaught.length;
+            });
+
+            function rank(array, id) {
+                id = CurrentUser.user()._id;
+                array = $scope.allUsers;
+                var result = 0;
+                for (var i = 0; i < array.length; i++) {
+                    if (array[i]._id === id) {
+                        return result = i;
+                    }
+                }
+                return result;
+            }
+            $scope.user.rank = rank() + 1;
+        });
 
 
 
-        console.log($scope.user.cartridge);
+
     });
