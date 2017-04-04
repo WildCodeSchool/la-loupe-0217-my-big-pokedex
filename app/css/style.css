@@ -307,38 +307,6 @@ h2 {
     background-image: url(../img/bckgrd-types/ground.png);
 }
 
-.dark {
-    background-image: url(../img/bckgrd-types/dark.png);
-    color: white;
-}
-
-.dragon {
-    background-image: url(../img/bckgrd-types/dragon.png);
-    color: white;
-}
-
-.electric {
-    background-image: url(../img/bckgrd-types/electr.png);
-}
-
-.fairy {
-    background-image: url(../img/bckgrd-types/fairy.png);
-}
-
-.fight {
-    background-image: url(../img/bckgrd-types/fight.png);
-}
-.psychic {
-    background-image: url(../img/bckgrd-types/psychic.png);
-}
-
-.fighting {
-    background-image: url(../img/bckgrd-types/fighting.png);
-}
-
-.ground {
-    background-image: url(../img/bckgrd-types/ground.png);
-}
 .fire {
     background-image: url(../img/bckgrd-types/fire.png);
 }
@@ -353,39 +321,6 @@ h2 {
 
 .normal {
     background-image: url(../img/bckgrd-types/normal.png);
-}
-.psychic {
-    background-image: url(../img/bckgrd-types/psychic.png);
-}
-
-.steel {
-    background-image: url(../img/bckgrd-types/steel.png);
-}
-
-.water {
-    background-image: url(../img/bckgrd-types/water.png);
-}
-
-.modal-title {
-    text-align: left;
-    text-transform: capitalize;
-    font-weight: bold;
-}
-
-.grass {
-    background-image: url(../img/bckgrd-types/grass.png);
-}
-
-.ice {
-    background-image: url(../img/bckgrd-types/ice.png);
-}
-
-.normal {
-    background-image: url(../img/bckgrd-types/normal.png);
-}
-
-.flying {
-    background-image: url(../img/bckgrd-types/flying.png);
 }
 
 .flying {
@@ -453,25 +388,28 @@ h2 {
     font-weight: bold;
     font-size: 105%;
     padding-bottom: 0.5em;
+    border-bottom: 0px solid #FADE41;
 }
 
 .media {
     border: groove #FADE41 0.3em;
     max-width: 92%;
-    margin: 0.5em auto;
+    max-height: 9em;
+    margin: 0em auto;
     background-color: white;
 }
 
 .media-body {
-    padding: 1em 1.5em 0.5em 0.5em;
+    padding: 0.25em 1.5em 0.25em 0.5em;
     text-align: justify;
-    font-size: 85%;
+    font-size: 82%;
     vertical-align: middle;
 }
 
 .modal-footer {
     position: absolute;
     bottom: 0px;
+    border-top: 0px solid #FADE41;
 }
 
 .media-stat {
@@ -489,6 +427,7 @@ h2 {
     background-color: white;
     font-weight: bold;
     padding-left: 1em;
+    padding-top: 0.25em;
 }
 
 .hp {
@@ -588,6 +527,7 @@ h2 {
 .media-evolution {
     border: groove #FADE41 0.3em;
     max-width: 92%;
+    max-height: 8em;
     margin: 0.5em auto;
 }
 
@@ -595,30 +535,19 @@ h2 {
     text-align: center;
     font-size: 90%;
     font-weight: bold;
+    margin-left: 15%;
 }
 
-.evol1 {
-    border: solid black 1px;
-    border-radius: 50%;
-    height: 4em;
-    width: 4em;
-    margin: -9em 2.5em 0.5em;
+.glyphicon-chevron-right {
+    margin-left: 15%;
 }
 
-.evol2 {
-    border: solid black 1px;
+.evolution {
+    background-color: white;
     border-radius: 50%;
-    height: 4em;
-    width: 4em;
-    margin: -4.5em 11em;
-}
-
-.evol3 {
-    border: solid black 1px;
-    border-radius: 50%;
-    height: 4em;
-    width: 4em;
-    margin: 0.5em 19em;
+    height: 75%;
+    width: 80%;
+    margin: 0.25em 0.60em 0.5em;
 }
 
 
