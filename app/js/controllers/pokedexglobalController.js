@@ -29,10 +29,10 @@
           function addEvol(array) {
             var evols = [];
               array.forEach(function(pokemon) {
-                  evols.push(filterEvol(pokemon.species))
+                  evols.push(filterEvol(pokemon.species));
                   if(pokemon.evolves_to.length > 0) {
                     addEvol(pokemon.evolves_to.species.url);
-                  };
+                  }
               });
           }
 
@@ -43,7 +43,7 @@
                   $scope.japName = (res.data.names.filter(filterJap))[0].name;
                   $http.get(res.data.evolution_chain.url).then(function(res) {
                       console.log('evolution_chain :', res.data);
-                      $scope.evols = addEvol([res.data.chain])
+                      $scope.evols = addEvol([res.data.chain]);
                   });
 
               }, function(err) {
