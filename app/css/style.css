@@ -288,8 +288,58 @@ h2 {
     background-image: url(../img/bckgrd-types/ground.png);
 }
 
+.dark {
+    background-image: url(../img/bckgrd-types/dark.png);
+}
+
+.dragon {
+    background-image: url(../img/bckgrd-types/dragon.png);
+}
+
+.electric {
+    background-image: url(../img/bckgrd-types/electr.png);
+}
+
+.fairy {
+    background-image: url(../img/bckgrd-types/fairy.png);
+}
+
+.fight {
+    background-image: url(../img/bckgrd-types/fight.png);
+}
+
 .fire {
     background-image: url(../img/bckgrd-types/fire.png);
+}
+
+.grass {
+    background-image: url(../img/bckgrd-types/grass.png);
+}
+
+.ice {
+    background-image: url(../img/bckgrd-types/ice.png);
+}
+
+.normal {
+    background-image: url(../img/bckgrd-types/normal.png);
+}
+
+.psychic {
+    background-image: url(../img/bckgrd-types/psychic.png);
+}
+
+.steel {
+    background-image: url(../img/bckgrd-types/steel.png);
+}
+
+.water {
+    background-image: url(../img/bckgrd-types/water.png);
+}
+
+.modal-title {
+    text-align: left;
+    text-transform: capitalize;
+    font-weight: bold;
 }
 
 .grass {
