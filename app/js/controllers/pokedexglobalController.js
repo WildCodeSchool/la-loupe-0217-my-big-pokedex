@@ -21,32 +21,58 @@
           function filterEntrie(objEntrie) {
               return objEntrie.version.name === "alpha-sapphire" && objEntrie.language.name === "en";
           }
+
+          function filterEvol(objEvol) {
+              return objEvol.charAt(length() - 1);
+          }
+
+          function addEvol(array) {
+            var evols = [];
+              array.forEach(function(pokemon) {
+                  evols.push(filterEvol(pokemon.species))
+                  if(pokemon.evolves_to.length > 0) {
+                    addEvol(pokemon.evolves_to.species.url);
+                  };
+              });
+          }
+
           $scope.getSpe = function(id) {
               pokemonService.getSpe(id).then(function(res) {
+                  console.log(res.data);
                   $scope.entrie = (res.data.flavor_text_entries.filter(filterEntrie))[0].flavor_text;
                   $scope.japName = (res.data.names.filter(filterJap))[0].name;
+                  $http.get(res.data.evolution_chain.url).then(function(res) {
+                      console.log('evolution_chain :', res.data);
+                      $scope.evols = addEvol([res.data.chain])
+                  });
+
               }, function(err) {
                   console.log('erreur', err);
               });
-          };
+            };
 
           $scope.spinner = true;
 
           function filterHp(obj) {
               return obj.stat.url === "https://pokeapi.co/api/v2/stat/1/";
           }
+
           function filterAtt(obj) {
               return obj.stat.url === "https://pokeapi.co/api/v2/stat/2/";
           }
+
           function filterDef(obj) {
               return obj.stat.url === "https://pokeapi.co/api/v2/stat/3/";
           }
+
           function filterAts(obj) {
               return obj.stat.url === "https://pokeapi.co/api/v2/stat/4/";
           }
+
           function filterDfs(obj) {
               return obj.stat.url === "https://pokeapi.co/api/v2/stat/5/";
           }
+
           function filterSpd(obj) {
               return obj.stat.url === "https://pokeapi.co/api/v2/stat/6/";
           }
@@ -54,13 +80,10 @@
           $scope.getOne = function(id) {
               $scope.spinner = true;
               pokemonService.getOne(id).then(function(res) {
-                  console.log(res.data);
                   $scope.types = res.data.types;
-                  $scope.classTypes = displayClassTypes($scope.types);
-                  console.log('types', $scope.classTypes);
+                  $scope.classTypes = displayClassTypes([$scope.types[$scope.types.length - 1]]);
                   $scope.height = res.data.height / 10;
                   $scope.weight = res.data.weight / 10;
-                  console.log($scope.types);
                   $scope.spinner = false;
                   $scope.stats = res.data.stats;
                   $scope.hp = ($scope.stats.filter(filterHp))[0].base_stat;
@@ -81,10 +104,10 @@
           };
 
           function displayClassTypes(types) {
-            if (types !== undefined) {
-              return types.map( function(type) {
-                return type.type.name;
-              }).join(' ');
-            }
+              if (types !== undefined) {
+                  return types.map(function(type) {
+                      return type.type.name;
+                  }).join(' ');
+              }
           }
       });
