@@ -14,7 +14,7 @@
                         <p>
                 </div>
                 <div class="form-group">
-                    <label>Pokemons catched</label>
+                    <label>Pokemons caught</label>
                     <p>{{ user.pokemonCaught.length }}
                         <p>
                 </div>
@@ -25,6 +25,7 @@
                 </div>
                 <div class="form-group">
                     <label>Cartridge owned</label>
+                    <p>{{ user.cartridge.length}}</p>
                     <br>
                     <button class="btn-primary" ng-click="showme=true">Update</button>
                     <button class="btn-warning" ng-click="showme=false; update()">Save</button>
