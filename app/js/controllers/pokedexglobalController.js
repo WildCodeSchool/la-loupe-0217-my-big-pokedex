@@ -44,7 +44,6 @@
                       console.log('evolution_chain :', res.data);
                       $scope.evols = addEvol(res.data.chain, []);
                       $scope.spinner = false;
-
                   });
               }, function(err) {
                   console.log('erreur', err);
