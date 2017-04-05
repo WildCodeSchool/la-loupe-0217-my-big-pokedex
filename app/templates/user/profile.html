@@ -27,19 +27,18 @@
                     <label>Cartridge owned</label>
                     <p>{{ user.cartridge.length}}</p>
                     <br>
-                    <button class="btn-primary" ng-click="showme=true">Update</button>
-                    <button class="btn-warning" ng-click="showme=false; update()">Save</button>
+
                 </div>
             </div>
         </div>
     </div>
 
     <div class="wrapper col-xs-9">
-        <div class="row" ng-show="showme">
+        <div class="row">
             <div class=" col-sm-2" ng-repeat="cartridge in cartridges">
                 <div class="cartridge">
                     <h5 class="cartridgeTitle">{{cartridge.name}}</h5>
-                    <button class="btnprofile" type="submit" ng-click="changeClass(cartridge.name)" value="Save">
+                    <button class="btnprofile" type="submit" ng-click="changeClass(cartridge.name);update()" value="Save">
                                   <img class="cartridge-img" ng-class="{'cartridge-click': user.cartridge.includes(cartridge.name)}" src="img/games/pokemon-{{cartridge.name}}.jpg" alt="Cartridge"></img>
                               </button>
                 </div>
