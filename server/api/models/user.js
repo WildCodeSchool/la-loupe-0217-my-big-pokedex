@@ -33,9 +33,14 @@ const userSchema = new mongoose.Schema({
     pokemonCaught: {
         type: Array,
     },
+    //rank: {
+      //  'type': Number,
+        //'default': 0
+    //},
     cartridge: {
         type: Array,
     }
+
 });
 
 userSchema.methods.comparePassword = function(pwd, cb) {
@@ -153,6 +158,25 @@ export default class User {
             }
         });
     }
+
+    updateAll(req, res) {
+        model.updateAll({
+        },req.body, (err, users) => {
+            if (err || !users) {
+                res.status(500).send('ça marche pas !');
+            } else {
+                let tk = jsonwebtoken.sign(user, token, {
+                    expiresIn: "24h"
+                });
+                res.json({
+                    success: true,
+                    users: users,
+                    token: tk
+                });
+            }
+        });
+    }
+
 
     delete(req, res) {
         model.findByIdAndRemove(req.params.id, (err) => {

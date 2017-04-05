@@ -85,8 +85,19 @@ angular.module('app')
 
         //PHILIPPE//
 
-        $scope.user = CurrentUser.user();
-        console.log($scope.user);
+        $scope.user = {};
+        var id = CurrentUser.user()._id;
+        console.log(id);
+
+        UserService.getOne(id).then(function(res) {
+            $scope.user = res.data;
+            console.log($scope.user);
+        });
+
+        $scope.allUsers = [];
+        UserService.getAll().then(function(res) {
+            $scope.allUsers = res.data;
+          });
 
         $scope.hasPokemon = function(id) {
             return $scope.user.pokemonCaught.indexOf(id) !== -1;
