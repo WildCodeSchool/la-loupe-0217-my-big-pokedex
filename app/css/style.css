@@ -644,5 +644,40 @@ h2 {
 /*REGISTER*/
 
 .register {
-    margin-top: 100px;
+    margin-top: 0%;
+    margin-bottom: 5%;
+}
+
+.card-register {
+    width: 100%;
+    border-radius: 50%;
+    opacity: 0%;
+}
+
+.card-register-img {
+    width: 200px;
+    height: 100%;
+    filter: grayscale(100%);
+    box-shadow: 1px 1px 10px 1px;
+}
+
+.card-register-img-click {
+    width: 200px;
+    height: 100%;
+    filter: grayscale(0%);
+    box-shadow: 1px 1px 10px 1px;
+}
+
+.card-register-img:hover {
+    width: 200px;
+    height: 100%;
+    filter: grayscale(0%);
+    box-shadow: 1px 1px 10px 1px
+}
+
+.card-register-btn {
+    background-color: white;
+    width: 100px%;
+    height: 100%;
+    border: none;
 }

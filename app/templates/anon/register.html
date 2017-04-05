@@ -1,6 +1,14 @@
-<div class="container register">
-
-
+<div class="container ">
+  <h1 class="top10_h1">Choose your best Profile</h1>
+<div class="row register">
+  <div class="col-lg-2 col-sm-3 col-xs-6"  ng-repeat ="image in images">
+  <div class="card-register">
+      <button class="card-register-btn" value="Save" type="submit" ng-model="user.image.name" ng-click="addImage(image.name)">
+      <img class="card-register-img" ng-src="img/users/{{image.name}}.png" ng-class="{'card-register-img-click': user.image.includes(image.name)}">
+              </button>
+  </div>
+</div>
+</div>
 <div class="row">
     <div class="col-xs-6 col-xs-offset-3">
         <form class="form_register" name="loginForm" novalidate ng-submit="register()">
