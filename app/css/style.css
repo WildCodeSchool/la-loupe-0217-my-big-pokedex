@@ -261,7 +261,6 @@ h2 {
     text-decoration: none;
 }
 
-
 /* MODAL */
 
 .spinner {
@@ -644,4 +643,70 @@ h2 {
 
 .register {
     margin-top: 100px;
+}
+
+/* CARDS ON THE HOME PAGE */
+
+.caption_ash {
+  position: absolute;
+  top: 180px;
+  bottom: 72px;
+  left: 20px;
+  right: 20px;
+  background: rgba(23, 71, 146, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.thumbnail_home:hover .caption_ash{
+  visibility: visible;
+  opacity: 1;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+.caption_addgames {
+  position: absolute;
+  top: 180px;
+  bottom: 72px;
+  left: 20px;
+  right: 20px;
+  background: rgba(248, 210, 14, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.thumbnail_home:hover .caption_addgames {
+  visibility: visible;
+  opacity: 1;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+.caption_catch {
+  position: absolute;
+  top: 180px;
+  bottom: 72px;
+  left: 20px;
+  right: 20px;
+  background: rgba(168, 224, 250, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.thumbnail_home:hover .caption_catch {
+  visibility: visible;
+  opacity: 1;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+.h3_home {
+  text-align: center;
 }
