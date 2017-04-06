@@ -166,6 +166,10 @@ h2 {
 
 /* CARDS */
 
+.mainSpinner {
+    text-align: center;
+}
+
 .card {
     border-radius: 5%;
     padding: 0.5em 0.5em 0.75em 0.54em;
