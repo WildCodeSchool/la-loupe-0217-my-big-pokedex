@@ -25,7 +25,22 @@ const userSchema = new mongoose.Schema({
     isAdmin: {
         type: Boolean,
         default: false
+    },
+    firstname: {
+        type: String,
+        required: true
+    },
+    pokemonCaught: {
+        type: Array,
+    },
+    image: {
+        type: String,
+        default:'sacha'
+    },
+    cartridge: {
+        type: Array,
     }
+
 });
 
 userSchema.methods.comparePassword = function(pwd, cb) {
@@ -56,7 +71,7 @@ export default class User {
                             res.status(400).send(err);
                         } else {
                             if (isMatch) {
-                                user.password = null;
+                                delete user.password;
                                 let tk = jsonwebtoken.sign(user, token, {
                                     expiresIn: "24h"
                                 });
@@ -112,6 +127,7 @@ export default class User {
                     }
                     res.status(500).send(err.message);
                 } else {
+                    delete user.password
                     let tk = jsonwebtoken.sign(user, token, {
                         expiresIn: "24h"
                     });
@@ -136,12 +152,30 @@ export default class User {
                 });
                 res.json({
                     success: true,
-                    user: user,
+                    user: User,
                     token: tk
                 });
             }
         });
     }
+
+    updateAll(req, res) {
+        model.updateAll({}, req.body, (err, users) => {
+            if (err || !users) {
+                res.status(500).send('ça marche pas !');
+            } else {
+                let tk = jsonwebtoken.sign(user, token, {
+                    expiresIn: "24h"
+                });
+                res.json({
+                    success: true,
+                    users: users,
+                    token: tk
+                });
+            }
+        });
+    }
+
 
     delete(req, res) {
         model.findByIdAndRemove(req.params.id, (err) => {
@@ -152,4 +186,17 @@ export default class User {
             }
         });
     }
+
+    // updatecartridge(req, res) {
+    //     model.update(req.body, (err, cartridge) => {
+    //         if (err) {
+    //             res.status(500).send(err.message);
+    //         } else {
+    //             res.json({
+    //                 success: true,
+    //                 cartridge: cartridge
+    //             });
+    //         };
+    //     });
+    // };
 }

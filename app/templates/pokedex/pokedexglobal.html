@@ -1,0 +1,93 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="input-group input-gp">
+                <input type="text" ng-model="searchText" class="form-control" placeholder="Search for...">
+            </div>
+        </div>
+    </div><br>
+
+    <div id="searchTextResults" class="row">
+        <div class="col-lg-2 col-sm-3 col-xs-6" ng-repeat="pokemon in pokemons | filter:searchText">
+            <div class="card">
+                <button id="modal-to-click" data-toggle="modal" data-target="#{{ pokemon.id }}" ng-click="clear(); getSpe(pokemon.id); getOne(pokemon.id)">
+                <img class="card-img" src="{{pokemon.img}}" alt="Card image cap">
+                        </button>
+                <div class="card-block text-center">
+                    <h5 class="card-title">{{pokemon.name}}</h5><span class="pokemon-tag">No.{{pokemon.id}}</span>
+                    <a ui-sref="anon.register" class="btn-card">I caught him !</a>
+                </div>
+            </div>
+            <div id="{{ pokemon.id }}" class="modal animated bounceInDown" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content-spinner" ng-show="spinner">
+                        <img class="spinner" src="img/pokeball.gif">
+                    </div>
+                    <div class="modal-content {{ classTypes }}" ng-show="!spinner">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title">{{pokemon.name}}</h4>
+                            <span class="modal-tag">No.{{pokemon.id}}</span>
+                            <h5 class="modalcard-subtitle">{{ japName }}</h5>
+                            <img ng-repeat="type in types | orderBy: 'slot'" ng-src="img/types/{{ type.type.name }}.png">
+                            <div class="height-and-weight">
+                                <span class="modal-height">Height : {{ height }} m</span><br>
+                                <span class="modal-weight">Weight : {{ weight }} kg</span>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left media-middle">
+                                <div class="modal-body">
+                                    <img class="media-object" src="{{pokemon.img}}" alt="Pokemon imgage">
+                                </div>
+                            </div>
+                            <div class="media-body">
+                                <p>{{ entrie }}</p>
+                            </div>
+                        </div>
+                        <div class="media-stat">
+                            <div class="titles-gauge">
+                                <span>HP</span>
+                                <span>Attack</span>
+                                <span>Defense</span>
+                                <span>Att-Spe</span>
+                                <span>Def-Spe</span>
+                                <span>Speed</span>
+                            </div>
+                            <div class="hp">
+                                <div class="hp-gauge" style="height: {{ hp }}%;">{{ hp }}</div>
+                            </div>
+                            <div class="att">
+                                <div class="att-gauge" style="height: {{ att }}%;">{{ att }}</div>
+                            </div>
+                            <div class="def">
+                                <div class="def-gauge" style="height: {{ def }}%;">{{ def }}</div>
+                            </div>
+                            <div class="ats">
+                                <div class="ats-gauge" style="height: {{ ats }}%;">{{ ats }}</div>
+                            </div>
+                            <div class="dfs">
+                                <div class="dfs-gauge" style="height: {{ dfs }}%;">{{ dfs }}</div>
+                            </div>
+                            <div class="spd">
+                                <div class="spd-gauge" style="height: {{ spd }}%;">{{ spd }}</div>
+                            </div>
+                        </div>
+                        <div class="media-evolution">
+                            <span class="glyphicon glyphicon-chevron-right"></span><span class="evol-title">Evolution details</sapn><span class="glyphicon glyphicon-chevron-right"></span>
+                            <div class="row">
+                                <div class="col-lg-4 col-sm-4 col-xs-4" ng-repeat="evol in evols">
+                                    <img class="evolution" ng-src="{{'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + evol + '.png'}}">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="versions-details">
+                                    <span>See in : {{ version.version.name }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,1 +1,48 @@
-Profile de {{user.email}}
+<div class="row profile">
+
+    <div class="col-xs-3">
+        <div class="containerProfile">
+            <div class="encabezado">
+                <img ng-src="img/users/{{user.image}}.png" width="100%" />
+            </div>
+            <div class="contenido">
+                <h3>{{user.firstname}}</h3>
+                <h4>Pokemon Trainer</h4>
+                <div class="form-group">
+                    <label>Email</label>
+                    <p>{{ user.email}}
+                        <p>
+                </div>
+                <div class="form-group">
+                    <label>Pokemons caught</label>
+                    <p>{{ user.pokemonCaught.length }}
+                        <p>
+                </div>
+                <div class="form-group">
+                    <label>Rank</label>
+                    <p>{{ user.rank }}
+                        <p>
+                </div>
+                <div class="form-group">
+                    <label>Cartridge owned</label>
+                    <p>{{ user.cartridge.length}}</p>
+                    <br>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper col-xs-9">
+        <div class="row">
+            <div class=" col-sm-2" ng-repeat="cartridge in cartridges">
+                <div class="cartridge">
+                    <h5 class="cartridgeTitle">{{cartridge.name}}</h5>
+                    <button class="btnprofile" type="submit" ng-click="changeClass(cartridge.name);update()" value="Save">
+                                  <img class="cartridge-img" ng-class="{'cartridge-click': user.cartridge.includes(cartridge.name)}" ng-src="img/games/pokemon-{{cartridge.name}}.jpg" alt="Cartridge"></img>
+                              </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
