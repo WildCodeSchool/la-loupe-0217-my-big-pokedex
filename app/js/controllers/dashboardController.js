@@ -142,4 +142,6 @@ angular.module('app')
         $scope.update = function() {
             UserService.update($scope.user._id, $scope.user);
         };
+
+        $scope.addPokemonButton = "In my Pokédex";
     });

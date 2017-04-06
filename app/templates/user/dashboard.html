@@ -16,10 +16,14 @@
                 <div class="card-block text-center">
                     <h5 class="card-title">{{pokemon.name}}</h5><span class="pokemon-tag">No.{{pokemon.id}}</span>
                     <div ng-if="hasPokemon(pokemon.id)">
-                        <button class="btn btn-card-success" ng-click="addPokemon(pokemon.id); update()">In my Pokédex!</button>
+                      <button class="btn btn-card-success"
+                              ng-class="{'btn-card-suppr':hovering}"
+                              ng-mouseover="hovering=true; addPokemonButton='Remove'"
+                              ng-mouseleave="hovering=false; addPokemonButton='In my Pokédex'"
+                              ng-click="addPokemon(pokemon.id); update(); addPokemonButton='banane'">{{addPokemonButton}}</button>
                     </div>
                     <div ng-if="hasnotPokemon(pokemon.id)">
-                        <button class="btn btn-card" ng-click="addPokemon(pokemon.id); update()">I caught him!</button>
+                      <button class="btn btn-card" ng-click="addPokemon(pokemon.id); update()">In my Pokédex</button>
                     </div>
                 </div>
             </div>

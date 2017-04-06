@@ -33,10 +33,10 @@ const userSchema = new mongoose.Schema({
     pokemonCaught: {
         type: Array,
     },
-    //rank: {
-      //  'type': Number,
-        //'default': 0
-    //},
+    image: {
+        type: String,
+        default:'sacha'
+    },
     cartridge: {
         type: Array,
     }
@@ -160,8 +160,7 @@ export default class User {
     }
 
     updateAll(req, res) {
-        model.updateAll({
-        },req.body, (err, users) => {
+        model.updateAll({}, req.body, (err, users) => {
             if (err || !users) {
                 res.status(500).send('ça marche pas !');
             } else {

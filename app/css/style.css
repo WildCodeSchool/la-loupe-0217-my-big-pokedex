@@ -234,7 +234,7 @@ h2 {
     text-decoration: none;
 }
 
-.btn-card-success:hover {
+.btn-card-suppr {
     background: #e74c3c;
     background-image: -webkit-linear-gradient(top, #e74c3c, #c0392b);
     background-image: -moz-linear-gradient(top, #e74c3c, #c0392b);
@@ -245,7 +245,7 @@ h2 {
     -moz-border-radius: 28;
     border-radius: 28px;
     font-family: Arial;
-    color: #ffffff;
+    color: #ffffff!important;
     font-size: 1em;
     padding: 0.5em 1em 0.5em 1em;
     text-decoration: none;
@@ -634,9 +634,45 @@ h2 {
     box-shadow: 1px 1px 10px 1px
 }
 
-
 /*REGISTER*/
 
 .register {
-    margin-top: 100px;
+  height: 100%;
+    margin-top: 1.5em;
+    margin-bottom: 5em;
+}
+
+.card-register {
+    width: 100%;
+    border-radius: 50%;
+    opacity: 0%;
+}
+
+.card-register-img {
+    width: 200px;
+    height: 100%;
+    filter: grayscale(100%);
+    box-shadow: 1px 1px 10px 1px;
+    transition-duration: 0.2s;
+}
+
+.card-register-img-click {
+    width: 200px;
+    height: 100%;
+    filter: grayscale(0%);
+    box-shadow: 1px 1px 10px 1px;
+}
+
+.card-register-img:hover {
+    width: 202px;
+    height: 100%;
+    filter: grayscale(0%);
+    box-shadow: 1px 1px 10px 1px
+}
+
+.card-register-btn {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
