@@ -1,25 +1,5 @@
 angular.module('app')
     .config(function($stateProvider, $urlRouterProvider, AccessLevels) {
-        // $stateProvider
-        //     .state('pokedex', {
-        //         abstract: true,
-        //         url: '/pokedex',
-        //         views: {
-        //             'navbar@': {
-        //                 templateUrl: 'anon/navbar.html',
-        //                 controller: 'NavbarController'
-        //             }
-        //         }
-        //     })
-        //     .state('pokedex.home', {
-        //         url: '/',
-        //         views: {
-        //             'content@': {
-        //                 templateUrl: 'pokedex/pokedexglobal.html',
-        //                 controller: 'pokedexglobalController'
-        //             }
-        //         }
-        //     });
         $stateProvider
             .state('anon', {
                 abstract: true,
@@ -78,7 +58,8 @@ angular.module('app')
                         controller: 'teamController'
                     }
                 }
-        })
+            })
+
             .state('anon.trainers', {
                 url: '/trainers',
                 views: {
@@ -88,6 +69,7 @@ angular.module('app')
                     }
                 }
             })
+
             .state('anon.register', {
                 url: '/register',
                 views: {
