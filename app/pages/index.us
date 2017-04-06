@@ -15,7 +15,7 @@
     <div ui-view='content'></div>
     <div class="navbar navbar-bottom footer-navbar" role="navigation">
       <div class="container">
-        <div class="navbar-text pull-left">&copy; 2017 Team Rocket</div>
+        <div class="navbar-text pull-left">&copy; 2017 - Sabrina, Jehan and Philippe, Wild Code School project - <a ui-sref-active="active"><a ui-sref="anon.team" ng-hide="auth.isAuthenticated()">About us</a></div>
       </div>
     </div>
 

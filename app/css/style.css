@@ -32,11 +32,22 @@ h2 {
 }
 
 
+/* FOOTER */
+
+.footer-navbar {
+    margin-bottom: 0;
+    margin-top: 10%;
+    border: 0;
+}
+
+.footer-navbar a {
+  color: white;
+  text-decoration: none;
+}
 /* NAVBAR */
 
 .logo>a>img {
     height: 45px;
-    margin-top: 3px;
 }
 
 .navbar-nav>li.logo>a {
@@ -44,25 +55,15 @@ h2 {
 }
 
 .navbar-nav>li {
-    padding-top: 0px;
-    padding-bottom: 0px;
     height: 45px;
 }
 
 .navbar-nav>logo.active>a {
-    padding: 0;
     height: 40px;
 }
 
-.navbar-default>li {
+.navbar-default .navbar-nav>.active>.logo>a {
     padding-top: 0px;
-    padding-bottom: 0px;
-}
-
-.navbar-default>.active>a {
-    padding: 0;
-    height: 40px;
-    margin-top: 0;
 }
 
 .h2_right {
@@ -121,6 +122,7 @@ h2 {
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
     color: white;
     background-image: linear-gradient(#e74c3c, #e74c3c 60%, #e74c3c);
+    padding-top: 15px;
 }
 
 
@@ -254,7 +256,6 @@ h2 {
     background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
     text-decoration: none;
 }
-
 
 /* MODAL */
 
@@ -677,6 +678,148 @@ h2 {
     height: 100%;
     border: none;
 }
+
+/* CARDS ON THE HOME PAGE */
+
+.caption_ash {
+  position: absolute;
+  top: 180px;
+  bottom: 72px;
+  left: 20px;
+  right: 20px;
+  background: rgba(23, 71, 146, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.thumbnail_home:hover .caption_ash{
+  visibility: visible;
+  opacity: 1;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+.caption_philippe {
+  position: absolute;
+  top: 180px;
+  bottom: 72px;
+  left: 20px;
+  right: 20px;
+  background: rgba(23, 71, 146, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.thumbnail_home:hover .caption_philippe{
+  visibility: visible;
+  opacity: 1;
+  padding-left: 15%;
+  padding-top: 20%;
+}
+
+.caption_addgames {
+  position: absolute;
+  top: 180px;
+  bottom: 72px;
+  left: 20px;
+  right: 20px;
+  background: rgba(248, 210, 14, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.thumbnail_home:hover .caption_addgames {
+  visibility: visible;
+  opacity: 1;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+.caption_catch {
+  position: absolute;
+  top: 180px;
+  bottom: 72px;
+  left: 20px;
+  right: 20px;
+  background: rgba(168, 224, 250, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.caption_sabrina {
+  position: absolute;
+  top: 180px;
+  bottom: 72px;
+  left: 20px;
+  right: 20px;
+  background: rgba(231, 76, 60, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.thumbnail_home:hover .caption_sabrina {
+  visibility: visible;
+  opacity: 1;
+  padding-left: 35%;
+  padding-top: 20%;
+}
+
+.caption_jehan {
+  position: absolute;
+  top: 180px;
+  bottom: 72px;
+  left: 20px;
+  right: 20px;
+  background: rgba(248, 210, 14, 0.72);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.thumbnail_home:hover .caption_jehan {
+  visibility: visible;
+  opacity: 1;
+  padding-left: 10%;
+  padding-top: 20%;
+}
+
+.thumbnail_home:hover .caption_catch {
+  visibility: visible;
+  opacity: 1;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+.thumbnail_team {
+  margin-top: 30px;
+}
+
+.h3_home {
+  text-align: center;
+}
+
+/* TEAM */
+
+.top10_h1 {
+  margin-top: 2em;
+  text-align: center;
+}
+
+.team {
+  width: 75%;
+  padding-bottom: 10px;
+}
+
+.team img {
+    display: inline-block;
 
 .trainers {
     min-height: 21em;
