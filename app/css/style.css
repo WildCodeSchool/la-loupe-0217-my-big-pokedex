@@ -8,10 +8,6 @@ header {
     color: white;
 }
 
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-    padding-top: 15px;
-}
-
 .top10_h1 {
     margin-top: 2em;
     width: 100%;
@@ -33,15 +29,6 @@ h2 {
 
 .h2_right {
     text-align: right;
-}
-
-
-/* FOOTER */
-
-.footer-navbar {
-    margin-bottom: 0;
-    margin-top: 10%;
-    border: 0;
 }
 
 
@@ -105,7 +92,7 @@ h2 {
 }
 
 .navbar-nav>.active>a {
-    padding: 0;
+    padding: 15px;
     height: 40px;
 }
 
@@ -173,6 +160,9 @@ h2 {
     margin-top: 6em;
 }
 
+#searchTextResults {
+    min-height: 24em;
+}
 
 /* CARDS */
 
@@ -412,6 +402,14 @@ h2 {
     border-top: 0px solid #FADE41;
 }
 
+.versions {
+    margin-bottom: 0.25em;
+}
+
+.versions-details {
+    font-size: 110%;
+}
+
 .media-stat {
     max-width: 92%;
     margin: 0.5em auto;
@@ -527,7 +525,7 @@ h2 {
 .media-evolution {
     border: groove #FADE41 0.3em;
     max-width: 92%;
-    max-height: 8em;
+    max-height: 8.5em;
     margin: 0.5em auto;
 }
 
@@ -545,9 +543,8 @@ h2 {
 .evolution {
     background-color: white;
     border-radius: 50%;
-    height: 75%;
     width: 80%;
-    margin: 0.25em 0.60em 0.5em;
+    margin: 0.5em 0.60em 0.5em;
 }
 
 

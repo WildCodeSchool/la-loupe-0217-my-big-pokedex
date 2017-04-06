@@ -6,7 +6,6 @@
             </div>
         </div>
     </div><br>
-
     <div id="searchTextResults" class="row">
         <div class="col-lg-2 col-sm-3 col-xs-6" ng-repeat="pokemon in pokemons | filter:searchText">
             <div class="card">
@@ -81,8 +80,8 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <div class="versions-details">
-                                    <span>Seen in : {{ version.version.name }}</span>
+                                <div class="versions">
+                                    <span class="versions-details">First seen in : {{ version1 }} & {{ version2 }}</span>
                                 </div>
                             </div>
                         </div>

@@ -87,6 +87,9 @@ angular.module('app')
                 $scope.ats = ($scope.stats.filter(filterAts))[0].base_stat;
                 $scope.dfs = ($scope.stats.filter(filterDfs))[0].base_stat;
                 $scope.spd = ($scope.stats.filter(filterSpd))[0].base_stat;
+                $scope.versions = res.data.game_indices;
+                $scope.version1 = ($scope.versions[$scope.versions.length -1]).version.name;
+                $scope.version2 = ($scope.versions[$scope.versions.length -2]).version.name;
             }, function(err) {
                 console.log('erreur', err);
             });
