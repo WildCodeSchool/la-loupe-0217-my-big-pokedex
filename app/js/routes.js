@@ -69,12 +69,22 @@ angular.module('app')
                     }
                 }
             })
+
             .state('anon.team', {
                 url: '/team',
                 views: {
                     'content@': {
                         templateUrl: 'anon/team.html',
                         controller: 'teamController'
+                    }
+                }
+        })
+            .state('anon.trainers', {
+                url: '/trainers',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/trainers.html',
+                        controller: 'trainersController'
                     }
                 }
             })

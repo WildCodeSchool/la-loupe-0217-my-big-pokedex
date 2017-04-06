@@ -1,0 +1,45 @@
+<div class="container trainers">
+    <h1 class="top10_h1">Trainers table</h1>
+    <div class="row GR" ng-repeat="oneUser in allUsers | orderBy:'-pokemonCaught.length'">
+
+        <div class="BOX col-xs-12 col-sm-8 col-md-6 col-lg-offset-3 col-lg-6">
+            <div class="starank glyphicon glyphicon-star" aria-hidden="true">{{oneUser.rank}}
+            </div>
+            <img class="BOXi" ng-src="img/users/{{oneUser.image}}.png" alt='' />
+            <a class="BOXa" href="/">{{oneUser.firstname}}</a>
+            <div class="BOXm">
+                <button data-toggle="modal" data-target="#{{oneUser._id}}"></button>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="{{oneUser._id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content-trainers">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                            <h1 class="modal-title title-trainers" id="exampleModalLabel">{{oneUser.firstname}}'s Pokédex</h1>
+                                    <img class="modalimage" ng-src="img/users/{{oneUser.image}}.png" alt='' />
+                            <div class=" title-rank glyphicon glyphicon-star" aria-hidden="true">{{oneUser.rank}}
+                            </div>
+
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="row row-trainers">
+                                <h3>Cartridge owned by {{oneUser.firstname}}</h3>
+                                <div class="modal-trainers-cartridge col-sm-2" ng-repeat="cart in oneUser.cartridge">
+                                    <img ng-src="/img/games/pokemon-{{cart}}.jpg" alt="Cartridge"></img>
+                                </div>
+                            </div>
+                            <div class="row row-trainers">
+                                <h3>Pokemon caught by {{oneUser.firstname}}</h3>
+                                <div class="modal-trainers-sprites col-sm-2" ng-repeat="pokecaught in oneUser.pokemonCaught">
+                                    <img ng-src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{pokecaught}}.png">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

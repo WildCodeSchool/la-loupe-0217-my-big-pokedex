@@ -127,7 +127,7 @@ export default class User {
                     }
                     res.status(500).send(err.message);
                 } else {
-                    delete user.password
+                    delete user.password;
                     let tk = jsonwebtoken.sign(user, token, {
                         expiresIn: "24h"
                     });

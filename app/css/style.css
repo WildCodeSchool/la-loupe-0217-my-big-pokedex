@@ -44,7 +44,6 @@ h2 {
   color: white;
   text-decoration: none;
 }
-
 /* NAVBAR */
 
 .logo>a>img {
@@ -94,7 +93,7 @@ h2 {
 }
 
 .navbar-nav>.active>a {
-    padding: 0;
+    padding: 15px;
     height: 40px;
 }
 
@@ -163,8 +162,15 @@ h2 {
     margin-top: 6em;
 }
 
+#searchTextResults {
+    min-height: 24em;
+}
 
 /* CARDS */
+
+.mainSpinner {
+    text-align: center;
+}
 
 .card {
     border-radius: 5%;
@@ -401,6 +407,14 @@ h2 {
     border-top: 0px solid #FADE41;
 }
 
+.versions {
+    margin-bottom: 0.25em;
+}
+
+.versions-details {
+    font-size: 110%;
+}
+
 .media-stat {
     max-width: 92%;
     margin: 0.5em auto;
@@ -516,7 +530,7 @@ h2 {
 .media-evolution {
     border: groove #FADE41 0.3em;
     max-width: 92%;
-    max-height: 8em;
+    max-height: 8.5em;
     margin: 0.5em auto;
 }
 
@@ -534,9 +548,8 @@ h2 {
 .evolution {
     background-color: white;
     border-radius: 50%;
-    height: 75%;
     width: 80%;
-    margin: 0.25em 0.60em 0.5em;
+    margin: 0.5em 0.60em 0.5em;
 }
 
 
@@ -638,7 +651,7 @@ h2 {
 }
 
 .card-register-img {
-    width: 200px;
+    width: 180px;
     height: 100%;
     filter: grayscale(100%);
     box-shadow: 1px 1px 10px 1px;
@@ -646,14 +659,14 @@ h2 {
 }
 
 .card-register-img-click {
-    width: 200px;
+    width: 180px;
     height: 100%;
     filter: grayscale(0%);
     box-shadow: 1px 1px 10px 1px;
 }
 
 .card-register-img:hover {
-    width: 202px;
+    width: 182px;
     height: 100%;
     filter: grayscale(0%);
     box-shadow: 1px 1px 10px 1px
@@ -807,4 +820,7 @@ h2 {
 
 .team img {
     display: inline-block;
+
+.trainers {
+    min-height: 21em;
 }
