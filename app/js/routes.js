@@ -102,7 +102,7 @@ angular.module('app')
                 }
             })
             .state('user.profile', {
-                url: '/profile/:firstname',
+                url: '/profile/:id',
                 views: {
                     'content@': {
                         templateUrl: 'user/profile.html',

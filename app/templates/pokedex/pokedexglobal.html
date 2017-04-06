@@ -15,7 +15,7 @@
                         </button>
                 <div class="card-block text-center">
                     <h5 class="card-title">{{pokemon.name}}</h5><span class="pokemon-tag">No.{{pokemon.id}}</span>
-                    <a href="#" class="btn-card">I caught him !</a>
+                    <a ui-sref="anon.register" class="btn-card">I caught him !</a>
                 </div>
             </div>
             <div id="{{ pokemon.id }}" class="modal animated bounceInDown" tabindex="-1" role="dialog" aria-hidden="true">
@@ -24,7 +24,6 @@
                         <img class="spinner" src="img/pokeball.gif">
                     </div>
                     <div class="modal-content {{ classTypes }}" ng-show="!spinner">
-
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                             <h4 class="modal-title">{{pokemon.name}}</h4>
@@ -47,14 +46,14 @@
                             </div>
                         </div>
                         <div class="media-stat">
-                          <div class="titles-gauge">
-                              <span>HP</span>
-                              <span>Attack</span>
-                              <span>Defense</span>
-                              <span>Att-Spe</span>
-                              <span>Def-Spe</span>
-                              <span>Speed</span>
-                          </div>
+                            <div class="titles-gauge">
+                                <span>HP</span>
+                                <span>Attack</span>
+                                <span>Defense</span>
+                                <span>Att-Spe</span>
+                                <span>Def-Spe</span>
+                                <span>Speed</span>
+                            </div>
                             <div class="hp">
                                 <div class="hp-gauge" style="height: {{ hp }}%;">{{ hp }}</div>
                             </div>
@@ -75,16 +74,20 @@
                             </div>
                         </div>
                         <div class="media-evolution">
-                          <p class="evol-title">Evolution details</p>
-                            <div class="evol1" ng-repeat="evol in evols">
-                                <img ng-src="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + evol + '.png'">
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn-card pull-left"><span>I caught him !</span aria-hidden="true"></button>
+                            <span class="glyphicon glyphicon-chevron-right"></span><span class="evol-title">Evolution details</sapn><span class="glyphicon glyphicon-chevron-right"></span>
+                            <div class="row">
+                                <div class="col-lg-4 col-sm-4 col-xs-4" ng-repeat="evol in evols">
+                                    <img class="evolution" ng-src="{{'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + evol + '.png'}}">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="versions-details">
+                                    <span>See in : {{ version.version.name }}</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>

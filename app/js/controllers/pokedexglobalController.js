@@ -22,36 +22,33 @@
               return objEntrie.version.name === "alpha-sapphire" && objEntrie.language.name === "en";
           }
 
-          function filterEvol(objEvol) {
-              return objEvol.charAt(length() - 1);
+          function getSpeciesNumber(pokemon) {
+              return pokemon.url.match(/\/([^\/]+)\/?$/)[1];
           }
 
-          function addEvol(array) {
-            var evols = [];
-              array.forEach(function(pokemon) {
-                  evols.push(filterEvol(pokemon.species))
-                  if(pokemon.evolves_to.length > 0) {
-                    addEvol(pokemon.evolves_to.species.url);
-                  };
-              });
+          function addEvol(pokemon, evols) {
+              console.log("pokemon", pokemon.species.name, "| species", evols);
+              evols.push(getSpeciesNumber(pokemon.species));
+              if (pokemon.evolves_to.length > 0) {
+                  return addEvol(pokemon.evolves_to[0], evols);
+              }
+              return evols;
           }
-
           $scope.getSpe = function(id) {
+              $scope.spinner = true;
               pokemonService.getSpe(id).then(function(res) {
                   console.log(res.data);
                   $scope.entrie = (res.data.flavor_text_entries.filter(filterEntrie))[0].flavor_text;
                   $scope.japName = (res.data.names.filter(filterJap))[0].name;
                   $http.get(res.data.evolution_chain.url).then(function(res) {
                       console.log('evolution_chain :', res.data);
-                      $scope.evols = addEvol([res.data.chain])
+                      $scope.evols = addEvol(res.data.chain, []);
+                      $scope.spinner = false;
                   });
-
               }, function(err) {
                   console.log('erreur', err);
               });
-            };
-
-          $scope.spinner = true;
+          };
 
           function filterHp(obj) {
               return obj.stat.url === "https://pokeapi.co/api/v2/stat/1/";
@@ -76,15 +73,14 @@
           function filterSpd(obj) {
               return obj.stat.url === "https://pokeapi.co/api/v2/stat/6/";
           }
-
           $scope.getOne = function(id) {
               $scope.spinner = true;
               pokemonService.getOne(id).then(function(res) {
+                  console.log(res.data);
                   $scope.types = res.data.types;
                   $scope.classTypes = displayClassTypes([$scope.types[$scope.types.length - 1]]);
                   $scope.height = res.data.height / 10;
                   $scope.weight = res.data.weight / 10;
-                  $scope.spinner = false;
                   $scope.stats = res.data.stats;
                   $scope.hp = ($scope.stats.filter(filterHp))[0].base_stat;
                   $scope.att = ($scope.stats.filter(filterAtt))[0].base_stat;
@@ -92,21 +88,29 @@
                   $scope.ats = ($scope.stats.filter(filterAts))[0].base_stat;
                   $scope.dfs = ($scope.stats.filter(filterDfs))[0].base_stat;
                   $scope.spd = ($scope.stats.filter(filterSpd))[0].base_stat;
+                  $scope.versions = res.data.game_indices;
+                  $scope.classVersions = displayClassVersions([$scope.versions[$scope.versions.length - 1]]);
               }, function(err) {
                   console.log('erreur', err);
               });
           };
-
-
           $scope.clear = function() {
               $scope.japName = '';
               $scope.entrie = '';
+              $scope.evols = '';
           };
 
           function displayClassTypes(types) {
               if (types !== undefined) {
                   return types.map(function(type) {
                       return type.type.name;
+                  }).join(' ');
+              }
+          }
+          function displayClassVersions(versions) {
+              if (versions !== undefined) {
+                  return versions.map(function(version) {
+                      return version.version.name;
                   }).join(' ');
               }
           }
