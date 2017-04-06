@@ -69,6 +69,15 @@ angular.module('app')
                     }
                 }
             })
+            .state('anon.trainers', {
+                url: '/trainers',
+                views: {
+                    'content@': {
+                        templateUrl: 'anon/trainers.html',
+                        controller: 'trainersController'
+                    }
+                }
+            })
             .state('anon.register', {
                 url: '/register',
                 views: {
