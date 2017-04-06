@@ -673,3 +673,7 @@ h2 {
     height: 100%;
     border: none;
 }
+
+.trainers {
+    min-height: 21em;
+}
