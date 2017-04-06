@@ -10,5 +10,4 @@ angular.module('app')
                 $scope.allUsers[i].rank = i + 1;
             }
         });
-
     });
