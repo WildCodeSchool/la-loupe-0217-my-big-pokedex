@@ -76,6 +76,7 @@
           $scope.getOne = function(id) {
               $scope.spinner = true;
               pokemonService.getOne(id).then(function(res) {
+                  console.log(res.data);
                   $scope.types = res.data.types;
                   $scope.classTypes = displayClassTypes([$scope.types[$scope.types.length - 1]]);
                   $scope.height = res.data.height / 10;
@@ -87,6 +88,8 @@
                   $scope.ats = ($scope.stats.filter(filterAts))[0].base_stat;
                   $scope.dfs = ($scope.stats.filter(filterDfs))[0].base_stat;
                   $scope.spd = ($scope.stats.filter(filterSpd))[0].base_stat;
+                  $scope.versions = res.data.game_indices;
+                  $scope.classVersions = displayClassVersions([$scope.versions[$scope.versions.length - 1]]);
               }, function(err) {
                   console.log('erreur', err);
               });
@@ -101,6 +104,13 @@
               if (types !== undefined) {
                   return types.map(function(type) {
                       return type.type.name;
+                  }).join(' ');
+              }
+          }
+          function displayClassVersions(versions) {
+              if (versions !== undefined) {
+                  return versions.map(function(version) {
+                      return version.version.name;
                   }).join(' ');
               }
           }
