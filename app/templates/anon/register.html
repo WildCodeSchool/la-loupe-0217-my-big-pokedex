@@ -1,33 +1,32 @@
 <div class="container ">
-  <h1 class="top10_h1">Choose your best Trainer profile</h1>
-<div class="row register">
-  <div class="col-lg-2 col-sm-3 col-xs-6"  ng-repeat ="image in images">
-  <div class="card-register">
-      <button class="card-register-btn" value="Save" type="submit" ng-model="user.image.name" ng-click="addImage(image.name)">
+    <h1 class="top10_h1">Choose your best Trainer profile</h1>
+    <div class="row register">
+        <div class="col-lg-2 col-sm-3 col-xs-6" ng-repeat="image in images">
+            <div class="card-register">
+                <button class="card-register-btn" value="Save" type="submit" ng-model="user.image.name" ng-click="addImage(image.name)">
       <img class="card-register-img" ng-src="img/users/{{image.name}}.png" ng-class="{'card-register-img-click': user.image.includes(image.name)}">
               </button>
-  </div>
-</div>
-</div>
-<div class="row">
-    <div class="col-xs-6 col-xs-offset-3">
-        <form class="form_register" name="loginForm" novalidate ng-submit="register()">
-            <div ng-repeat="error in errors">{{error.error}}</div>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input id="firstname" type="text" class="form-control" ng-model="user.firstname" required placeholder="Firstname">
-            </div><br>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                <input id="email" type="email" class="form-control" ng-model="user.email" required placeholder="Email Address">
-            </div><br>
-            <div class="input-group">
-                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                <input id="password" type="password" class="form-control" ng-model="user.password" required placeholder="Password">
-            </div><br>
-
-            <button type="submit" class="btn btn-primary btn-block">Register</button>
-        </form>
+            </div>
+        </div>
     </div>
-</div>
+    <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+            <form class="form_register" name="loginForm" novalidate ng-submit="register()">
+                <div ng-repeat="error in errors">{{error.error}}</div>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input id="firstname" type="text" class="form-control" ng-model="user.firstname" required placeholder="Firstname">
+                </div><br>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                    <input id="email" type="email" class="form-control" ng-model="user.email" required placeholder="Email Address">
+                </div><br>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input id="password" type="password" class="form-control" ng-model="user.password" required placeholder="Password">
+                </div><br>
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </form>
+        </div>
+    </div>
 </div>
