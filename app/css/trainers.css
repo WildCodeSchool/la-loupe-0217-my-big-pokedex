@@ -144,9 +144,9 @@
 .modal-content-trainers {
     display: block;
     border: solid lightgrey 1em;
-    width: 50em;
+    width: 40em;
     height: 100%;
-    margin-left: -15em;
+    margin-left: -30%;
     box-shadow: 1px 1px 5px 1px;
     background-image: url('/img/bckgrd-card.jpg');
     background-repeat: repeat-y;
