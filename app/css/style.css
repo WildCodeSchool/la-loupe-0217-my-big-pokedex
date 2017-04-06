@@ -646,7 +646,7 @@ h2 {
 }
 
 .card-register-img {
-    width: 200px;
+    width: 180px;
     height: 100%;
     filter: grayscale(100%);
     box-shadow: 1px 1px 10px 1px;
@@ -654,14 +654,14 @@ h2 {
 }
 
 .card-register-img-click {
-    width: 200px;
+    width: 180px;
     height: 100%;
     filter: grayscale(0%);
     box-shadow: 1px 1px 10px 1px;
 }
 
 .card-register-img:hover {
-    width: 202px;
+    width: 182px;
     height: 100%;
     filter: grayscale(0%);
     box-shadow: 1px 1px 10px 1px
