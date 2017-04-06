@@ -6,7 +6,10 @@
             </div>
         </div>
     </div><br>
-    <div id="searchTextResults" class="row">
+    <div class="mainSpinner" ng-show="mainSpinner" class="row">
+        <img src="img/mainSpinner.gif">
+    </div>
+    <div ng-show="!mainSpinner" id="searchTextResults" class="row">
         <div class="col-lg-2 col-sm-3 col-xs-6" ng-repeat="pokemon in pokemons | filter:searchText">
             <div class="card">
                 <button id="modal-to-click" data-toggle="modal" data-target="#{{ pokemon.id }}" ng-click="clear(); getSpe(pokemon.id); getOne(pokemon.id)">

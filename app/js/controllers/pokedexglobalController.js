@@ -1,5 +1,6 @@
 angular.module('app')
     .controller('pokedexglobalController', function($scope, pokemonService, $http, LocalService) {
+        $scope.mainSpinner = true;
         pokemonService.getAll().then(function(res) {
             console.log(res.data);
             $scope.pokemons = res.data.results;
@@ -8,6 +9,7 @@ angular.module('app')
                 pkmn.img = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/" + pkmn.id + ".png";
                 return pkmn;
             });
+            $scope.mainSpinner = false;
         }, function(err) {
             console.log('erreur', err);
         });
