@@ -603,7 +603,7 @@ h2 {
 .containerProfile {
     background-color: #f4f4f4;
     height: 200%;
-    margin: 10px;
+    margin: 5px;
     box-shadow: 1px 1px 10px 1px;
     transition-duration: 0.4s;
 }
