@@ -285,7 +285,7 @@ h2 {
 }
 
 .electric {
-    background-image: url(../img/bckgrd-types/electr.png);
+    background-image: url(../img/bckgrd-types/electric.png);
 }
 
 .fairy {
@@ -603,7 +603,7 @@ h2 {
 .containerProfile {
     background-color: #f4f4f4;
     height: 200%;
-    margin: 20px;
+    margin: 10px;
     box-shadow: 1px 1px 10px 1px;
     transition-duration: 0.4s;
 }
@@ -822,7 +822,11 @@ h2 {
 
 .team img {
     display: inline-block;
-
+}
 .trainers {
     min-height: 21em;
+}
+.harakiri {
+  padding-left: 0px;
+  padding-right: 0px;
 }

@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <h1 class="top10_h1">Top 10</h1>
     <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3" ng-repeat="oneUser in allUsers | orderBy:'-pokemonCaught.length'| limitTo:10">
+        <div class=" col-xs-12 col-sm-6 col-md-3 col-lg-2  harakiri"  ng-repeat="oneUser in allUsers | orderBy:'-pokemonCaught.length'| limitTo:10">
             <div class="containerProfile">
                 <div class="encabezado">
                     <img ng-src="img/users/{{oneUser.image}}.png" width="100%" />
@@ -10,7 +10,7 @@
                     <h3>{{oneUser.firstname}}</h3>
                     <h4>Pokémon Trainer</h4>
                     <div class="form-group">
-                        <label>Pokemons caught</label>
+                        <label>Pokemon caught</label>
                         <p>{{ oneUser.pokemonCaught.length }}
                             <p>
                     </div>
